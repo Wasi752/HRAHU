@@ -2,14 +2,25 @@ export const staffdata = [
     {
     id: 1,
     name: "Mawlana Muhammad Ismayeel", 
+    father: ".",
+    mother: ".",
+    present_address: "Kamrangir Char, Dakha.",
+    permanent_ddress: "Barishal.",
+    academic_achievement: "Dawra-e-Hadis.",
+    languages_skills: "Bengali, Arabic, English & Urdu.",
     designation: "Najim_e_Emtihan", 
     contact_no: "01913500453", 
     e_mail: "haiatululya@gmail.com", 
-    room_no: 301
+    room_no: 301,
+    image: ""
 }, 
 {
     id: 2,
-    name: "Mawlana Md Osiur Rahman", 
+    name: "Mawlana Md Osiur Rahman",
+    father: "MD Habib Ullah.",
+    mother: "Mrs Shamima Akter Parvin",
+    present_address: "polsupur, Donia-1236, Kadamtali, Dakha.",
+    permanent_ddress: "Jafrabad, Puran Bazar, Chandpur.",
     designation: "Office Secretary", 
     contact_no: "01305656703", 
     e_mail: "osiur2@gmail.com", 
@@ -19,18 +30,31 @@ export const staffdata = [
 {
     id: 3,
     name: "Mawlana Md Abdul Malik", 
+    father: "Let Muhammad Ali Moral.",
+    mother: "Rabeya Begum.",
+    present_address: "80/E, Bibir Bagich-1, Jatrabari, Dhaka.",
+    permanent_ddress: "Poradanga, Poradanga, Monirampur, Jashore.",
     designation: "Head of Accounts", 
     contact_no: "01935650801", 
     e_mail: "haiatululya@gmail.com", 
-    room_no: 203
+    room_no: 203,
+    image: "amalik.jpg" 
 },
 {
     id: 4,
-    name: "Md Sharif Hossain", 
+    name: "Md Sharif Hossain",
+    father: "let MD Khowaz Molla.",
+    mother: "Mst. Rina Begum.", 
+    present_address: "House 20, Road 6, Palashpur, Donia, Kadamtoli, Dhaka.",
+    permanent_ddress: "Sholdhara, Butoni, Ghior, Manikganj.",
+    academic_achievement: "B.B.A (Hon’s)",
+    languages_skills: "Bengali & English.",
     designation: "Senior Assistent", 
     contact_no: "01305656706", 
-    e_mail: "haiatululya@gmail.com", 
-    room_no: 302
+    e_mail: "test@gmail.com", 
+    room_no: 302,
+    image: ""
+
 },
 {
     id: 5,
@@ -41,10 +65,11 @@ export const staffdata = [
     permanent_ddress: "Gandra ,Gandra 3519, Muradnagar, comilla.",
     academic_achievement: "Dawra-e-Hadis.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Senior Assistant", 
+    designation: "Senior Assistant", 
     contact_no: "01674014986", 
     e_mail: "aliullahk94@gmail.com", 
-    room_no: 303
+    room_no: 303,
+    image: "aliullah.jpg"
 },
 {
     id: 6,
@@ -55,10 +80,11 @@ export const staffdata = [
     permanent_ddress: "Vill: Pingalia, post and Thana: Kasiani, Zila: Gopalganj",
     academic_achievement: "Dawra-e-Hadis.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Senior Assistant", 
+    designation: "Senior Assistant", 
     contact_no: "01681-681201", 
     e_mail: "mewfaru@gmail.com", 
-    room_no: 203
+    room_no: 203,
+    image: "farhan.jpeg"
 },
 {
     id: 7,
@@ -69,24 +95,26 @@ export const staffdata = [
     permanent_ddress: "G.P.Cha-211/1, T.B.Gate, Mohakhali, Banani, Dhaka-1213",
     academic_achievement: "Dawra-e-Hadis.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Computer Operator", 
+    designation: "Computer Operator", 
     contact_no: "01923-114855", 
     e_mail: "mazedmahmud333@gmail.com", 
-    room_no: 303
+    room_no: 303,
+    image: "amazed.jpeg"
 },
 {
     id: 8,
     name: "Mawlana Abdullah Rashid",
-    father: "",
-    mother: "",
-    present_address: "",
-    permanent_ddress: "",
+    father: "Deloar Hossain",
+    mother: "Asura Begum",
+    present_address: "Dogair, Sarulia, Demra, Dhaka",
+    permanent_ddress: "Chapila, Forokkabad, Chandpur, Chandpur",
     academic_achievement: "Dawra-e-Hadis.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Computer Operator", 
-    contact_no: "", 
-    e_mail: "", 
-    room_no: 302
+    designation: "Computer Operator", 
+    contact_no: "01615-650993", 
+    e_mail: "haiatululya@gmail.com", 
+    room_no: 302,
+    image: "abdullahrashed.jpeg"
 },
 {
     id: 9,
@@ -97,10 +125,11 @@ export const staffdata = [
     permanent_ddress: "Chapila, Forokkabad, Chandpur, Chandpur",
     academic_achievement: "Dawra-e-Hadis.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Computer Operator", 
+    designation: "Computer Operator", 
     contact_no: "01676-619225", 
     e_mail: "mahmudsaide@yahoo.com", 
-    room_no: 302
+    room_no: 302,
+    image: "mahmudsayed.jpeg"
 },
 {
     id: 10,
@@ -111,10 +140,11 @@ export const staffdata = [
     permanent_ddress: "80/e  polaspiur, Donia, Kodomtoli, Dhaka",
     academic_achievement: "Dawra-e-Hadis.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Computer Operator", 
+    designation: "Computer Operator", 
     contact_no: "01675497066", 
     e_mail: "omarfaruk01245@gmail.com", 
-    room_no: 200
+    room_no: 200,
+    image: "omarfaruk.jpeg"
 },
 {
     id: 11,
@@ -125,10 +155,11 @@ export const staffdata = [
     permanent_ddress: "Shamergoan, Kazirkhil, Shenbag,Noakhli",
     academic_achievement: "Dawra-e-Hadis.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Computer Operator", 
+    designation: "Computer Operator", 
     contact_no: "01628-854849", 
     e_mail: "tazuddin4@gmail.com", 
-    room_no: 302
+    room_no: 302,
+    image: "tazuddin.jpeg"
 },
 {
     id: 12,
@@ -139,10 +170,11 @@ export const staffdata = [
     permanent_ddress: "ROWHA, SUAPUR, DHAMRAI, DHAKA",
     academic_achievement: "HAFEJE QURAN.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Computer Operator", 
+    designation: "Computer Operator", 
     contact_no: "01732224212", 
     e_mail: "pmpublication78@gmail.com", 
-    room_no: 302
+    room_no: 302,
+    image: "nazrulislam.jpeg"
 },
 {
     id: 13,
@@ -153,13 +185,30 @@ export const staffdata = [
     permanent_ddress: "Char Bishnopur, Sadarpur, Faridpur",
     academic_achievement: "HAFEJE, Dawra-e-Hadis.",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "Computer Operator", 
+    designation: "Computer Operator", 
     contact_no: "01615650992", 
     e_mail: "shoaeebmew.12345@gmail.com", 
-    room_no: 302
+    room_no: 302,
+    image: "shuyaib.jpg"
 },
 {
     id: 14,
+    name: "Mawlana Md Sirazul Islam",
+    father: "AKBAR MOLLA",
+    mother: "SEKELA BEGUM",
+    present_address: "80/E, BIBIR BAGICHA-1, JATRABARI, Dhaka",
+    permanent_ddress: "MOHISHKHOLA, KALIA, NORAIL",
+    academic_achievement: "Dawra-e-Hadis.",
+    languages_skills: "Bengali, Arabic, Urdu.",
+    designation: "OFFICE ASSISTANT", 
+    contact_no: "01919199238", 
+    e_mail: "mmsirazul@gmail.com", 
+    room_no: 302,
+    image: "sirazulislam.jpeg"
+},
+
+{
+    id: 15,
     name: "Md. Habibur Rhaman",
     father: "Md. Arobe Ali Bapary",
     mother: "Mst. Fazilat Neasa",
@@ -167,10 +216,26 @@ export const staffdata = [
     permanent_ddress: "Village-Sheakhergaon, post- Luterchor, p.s- Meghna, dist- Comilla",
     academic_achievement: "SSC & HSC",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    Designation: "ASSistent Computer Operator", 
+    designation: "ASSistent Computer Operator", 
     contact_no: "01832-237179", 
     e_mail: "habibhm660@gmail.com", 
-    room_no: 302
+    room_no: 304,
+    image: "habib.jpg"
+},
+{
+    id: 16,
+    name: "Md. Masum",
+    father: "Md Siddiqur Rahman ",
+    mother: "Mst Halima Begam",
+    present_address: "Rayerbagh, Matuail, Kadamtaly, Dhaka",
+    permanent_ddress: "Potuakhali, Lamna, Galachipa, Barishal",
+    academic_achievement: "SSC",
+    languages_skills: "Bengali.",
+    designation: "Khadim", 
+    contact_no: "01736-428757", 
+    e_mail: "habibhm660@gmail.com", 
+    room_no: 304,
+    image: "masum.jpg"
 },
 ]
 

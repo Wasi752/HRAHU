@@ -6,7 +6,7 @@ import StaffSummary from './StaffSummary';
 
 function App() {
   return (
-    <div className="App">
+    <div className="w-full h-full">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/summary" element={<StaffSummary />} />

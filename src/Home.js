@@ -7,7 +7,7 @@ function Home() {
             <div className="w-[10%] h-full"></div>
             <div className="flex flex-col justify-center ml-40 w-[50%] h-[80%] mt-20 bg-gray-100">
             <p className="text-3xl text-justify-center ml-10 mb-5 text-blue-500">Human Resource Department</p>
-                <Link to="/form" className={cName}>Staff Info</Link>
+                <Link to="/summary" className={cName}>Staff Info</Link>
                 <Link to="/counter" className={cName}>Event</Link>
                 <Link to="/fetch" className={cName}>Work Flow</Link>
                 <Link to="/time" className={cName}>Pay Scal</Link>
