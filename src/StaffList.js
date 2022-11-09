@@ -1,245 +1,78 @@
-export const staffdata = [
-    {
-    id: 1,
-    name: "Mawlana Muhammad Ismayeel", 
-    father: ".",
-    mother: ".",
-    present_address: "Kamrangir Char, Dakha.",
-    permanent_ddress: "Barishal.",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Najim_e_Emtihan", 
-    contact_no: "01913500453", 
-    e_mail: "haiatululya@gmail.com", 
-    room_no: "Room No : 301",
-    image: ""
-}, 
-{
-    id: 2,
-    name: "Mawlana Md Osiur Rahman",
-    father: "MD Habib Ullah.",
-    mother: "Mrs Shamima Akter Parvin",
-    present_address: "polsupur, Donia-1236, Kadamtali, Dakha.",
-    permanent_ddress: "Jafrabad, Puran Bazar, Chandpur.",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Office Secretary", 
-    contact_no: "01305656703", 
-    e_mail: "osiur2@gmail.com", 
-    room_no: "Room No : 201",
-    image: "mdosiurrahman.jpg",
-},
-{
-    id: 3,
-    name: "Mawlana Md Abdul Malik", 
-    father: "Let Muhammad Ali Moral.",
-    mother: "Rabeya Begum.",
-    present_address: "80/E, Bibir Bagich-1, Jatrabari, Dhaka.",
-    permanent_ddress: "Poradanga, Poradanga, Monirampur, Jashore.",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Head of Accounts", 
-    contact_no: "01935650801", 
-    e_mail: "haiatululya@gmail.com", 
-    room_no: "Room No : 203",
-    image: "amalik.jpg" 
-},
-{
-    id: 4,
-    name: "Md Sharif Hossain",
-    father: "Father : Let MD Khowaz Molla.",
-    mother: "Mother : Mst. Rina Begum.", 
-    present_address: "Present_address : House 20, Road 6, Palashpur, Donia, Kadamtoli, Dhaka.",
-    permanent_ddress: "Permanent_ddress : Sholdhara, Butoni, Ghior, Manikganj.",
-    academic_achievement: "Academic_achievement : B.B.A (Hon’s)",
-    languages_skills: "Languages_skills : Bengali & English.",
-    designation: "Designation : Senior Assistent", 
-    contact_no: "Contact_no : 01305656706", 
-    e_mail: "E_mail : test@gmail.com", 
-    room_no: "Room No : 302",
-    image: ""
+import StaffDetails from "./StaffDetail";
+import {Link} from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { data } from "autoprefixer";
 
-},
-{
-    id: 5,
-    name: "Mawlana MD Aliullah Khan.",
-    father: "MD. Idris Khan.",
-    mother: "Laili Begum.",
-    present_address: "39 rosulpur, Donia 1236, Jatrabari, Dakha.",
-    permanent_ddress: "Gandra ,Gandra 3519, Muradnagar, comilla.",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Senior Assistant", 
-    contact_no: "01674014986", 
-    e_mail: "aliullahk94@gmail.com", 
-    room_no: "Room No : 303",
-    image: "aliullah.jpg"
-},
-{
-    id: 6,
-    name: "Mawlana Ahmadullah Farhan",
-    father: "Md. Hasanur Rahman",
-    mother: "Kamrun Nahar Begum",
-    present_address: "Kazla, Jatrabari, Dhaka",
-    permanent_ddress: "Vill: Pingalia, post and Thana: Kasiani, Zila: Gopalganj",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Senior Assistant", 
-    contact_no: "01681-681201", 
-    e_mail: "mewfaru@gmail.com", 
-    room_no: "Room No : 203",
-    image: "farhan.jpeg"
-},
-{
-    id: 7,
-    name: "Mawlana Mohammad Abdul Mazed",
-    father: "Mohammad Ali Khan",
-    mother: "Taslima Akter",
-    present_address: "G.P.Cha-211/1, T.B.Gate, Mohakhali, Banani, Dhaka-1213",
-    permanent_ddress: "G.P.Cha-211/1, T.B.Gate, Mohakhali, Banani, Dhaka-1213",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Computer Operator", 
-    contact_no: "01923-114855", 
-    e_mail: "mazedmahmud333@gmail.com", 
-    room_no: "Room No : 303",
-    image: "amazed.jpeg"
-},
-{
-    id: 8,
-    name: "Mawlana Abdullah Rashid",
-    father: "Deloar Hossain",
-    mother: "Asura Begum",
-    present_address: "Dogair, Sarulia, Demra, Dhaka",
-    permanent_ddress: "Chapila, Forokkabad, Chandpur, Chandpur",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Computer Operator", 
-    contact_no: "01615-650993", 
-    e_mail: "haiatululya@gmail.com", 
-    room_no: "Room No : 302",
-    image: "abdullahrashed.jpeg"
-},
-{
-    id: 9,
-    name: "Mawlana Mahmud Said",
-    father: "Sayed Ahmed",
-    mother: "Sadia Begum",
-    present_address: "Dogair, Sarulia, Demra, Dhaka",
-    permanent_ddress: "Chapila, Forokkabad, Chandpur, Chandpur",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Computer Operator", 
-    contact_no: "01676-619225", 
-    e_mail: "mahmudsaide@yahoo.com", 
-    room_no: "Room No : 302",
-    image: "mahmudsayed.jpeg"
-},
-{
-    id: 10,
-    name: "Mawlana Omar Faruk",
-    father: "Abdus Samad",
-    mother: "Sajeda Begum",
-    present_address: "80/e  polaspiur, Donia, Kodomtoli, Dhaka",
-    permanent_ddress: "80/e  polaspiur, Donia, Kodomtoli, Dhaka",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Computer Operator", 
-    contact_no: "01675497066", 
-    e_mail: "omarfaruk01245@gmail.com", 
-    room_no: "Room No : 200",
-    image: "omarfaruk.jpeg"
-},
-{
-    id: 11,
-    name: "Mawlana Md.Taz Uddin",
-    father: "Sheikh hamad",
-    mother: "Nur Jahan begum",
-    present_address: "House No:77, Road No:3, Block-G, Banasree, Dhaka",
-    permanent_ddress: "Shamergoan, Kazirkhil, Shenbag,Noakhli",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Computer Operator", 
-    contact_no: "01628-854849", 
-    e_mail: "tazuddin4@gmail.com", 
-    room_no: "Room No : 302",
-    image: "tazuddin.jpeg"
-},
-{
-    id: 12,
-    name: "HAFEJE NAZRUL ISLAM",
-    father: "LATE ABDUL MANNAN",
-    mother: "LATE HASINA BEGUM",
-    present_address: "102/D, NAYA POLTON",
-    permanent_ddress: "ROWHA, SUAPUR, DHAMRAI, DHAKA",
-    academic_achievement: "HAFEJE QURAN.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Computer Operator", 
-    contact_no: "01732224212", 
-    e_mail: "pmpublication78@gmail.com", 
-    room_no: "Room No : 302",
-    image: "nazrulislam.jpeg"
-},
-{
-    id: 13,
-    name: "Mawlana Md Shoaeeb",
-    father: "Md Abul Kashem",
-    mother: "Jubaida khanom",
-    present_address: "h# Uttara Pubali Gov Quarters, Circuit house road,Ramna:1217, Dhaka",
-    permanent_ddress: "Char Bishnopur, Sadarpur, Faridpur",
-    academic_achievement: "HAFEJE, Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Computer Operator", 
-    contact_no: "01615650992", 
-    e_mail: "shoaeebmew.12345@gmail.com", 
-    room_no: "Room No : 302",
-    image: "shuyaib.jpg"
-},
-{
-    id: 14,
-    name: "Mawlana Md Sirazul Islam",
-    father: "AKBAR MOLLA",
-    mother: "SEKELA BEGUM",
-    present_address: "80/E, BIBIR BAGICHA-1, JATRABARI, Dhaka",
-    permanent_ddress: "MOHISHKHOLA, KALIA, NORAIL",
-    academic_achievement: "Dawra-e-Hadis.",
-    languages_skills: "Bengali, Arabic, Urdu.",
-    designation: "OFFICE ASSISTANT", 
-    contact_no: "01919199238", 
-    e_mail: "mmsirazul@gmail.com", 
-    room_no: "Room No : 302",
-    image: "sirazulislam.jpeg"
-},
 
-{
-    id: 15,
-    name: "Md. Habibur Rhaman",
-    father: "Md. Arobe Ali Bapary",
-    mother: "Mst. Fazilat Neasa",
-    present_address: "Village-Rayerbagh, post- Matuail, p.s- Kodomtoly, dist- Dhaka",
-    permanent_ddress: "Village-Sheakhergaon, post- Luterchor, p.s- Meghna, dist- Comilla",
-    academic_achievement: "SSC & HSC",
-    languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "Assistent Computer Operator", 
-    contact_no: "01832-237179", 
-    e_mail: "habibhm660@gmail.com", 
-    room_no: "Room No : 304",
-    image: "habib.jpg"
-},
-{
-    id: 16,
-    name: "Md. Masum",
-    father: "Md Siddiqur Rahman ",
-    mother: "Mst Halima Begam",
-    present_address: "Rayerbagh, Matuail, Kadamtaly, Dhaka",
-    permanent_address: "Potuakhali, Lamna, Galachipa, Barishal",
-    academic_achievement: "SSC",
-    languages_skills: "Bengali.",
-    designation: "Khadim", 
-    contact_no: "01736-428757", 
-    e_mail: "habibhm660@gmail.com", 
-    room_no: "Room No : 304",
-    image: "masum.jpg"
-},
-]
+function StaffSummaryDiv({id, name, designation, contact_no, e_mail, image, i}){
+    return (
+        <div className="flex flex-row">
+                <div className="text-lg ml-10 mt-5 text-left w-[60%] h-[35%]">
+                    <p className="font-serif">{id}</p>
+                    <p className="text-xl text-red-500 font-bold font-serif">{name}</p>
+                    <p className="text-lg font-serif">{designation}</p>
+                    <p className="font-serif">{contact_no}</p>
+                    <p className="font-serif">{e_mail}</p>
+                </div>
+                
+                <Link to={"/sdetails/" + id} className="w-[30%] h-[35%] ml-40 mt-10 justify-right ">
+                    <img src={image} alt="Staff Pictur" className="w-[60%] h-[50%] ml-1" />
+                    <button 
+                        className="border text-sm bg-yellow-700 font-bold text-white hover:text-green-500 pr-5 pl-5 mt-1 ml-4"
+                        type="button"
+                        >
+                        Details
+                    </button>
+                </Link>
+        </div> 
+    );
+}
 
+function StaffSummary(){
+    const [pageNo, setPageNo] = useState(1);
+    const [staff, setStaff] = useState();
+    
+    useEffect(() => {
+        fetch('https://mocki.io/v1/10e2cef1-2965-41d8-b94e-984e14deb6de')
+      .then((response) => response.json())
+      .then((data) => {
+    const xyz = data
+    .filter((len, i) => i < (3 * pageNo) && i >= (3 * (pageNo - 1)))
+    .map((a, i) => 
+        <StaffSummaryDiv
+        i={i + 1 + (3 * (pageNo - 1))} 
+        id={a.id} 
+        name={a.name} 
+        designation={a.designation} 
+        contact_no={a.contact_no} 
+        e_mail={a.e_mail} 
+        image={a.image}/>);
+      
+        setStaff(xyz);
+      });
+    }, [pageNo]);
+    
+    return(
+        <div className="w-full h-full flex">
+            <div className="w-[20%] h-full bg-green-100">
+            <p className="text-2xl font-serif font-extrabold ml-10 mb-5 mt-40 text-blue-500">Staff Summary</p>
+            </div>
+            <div className="flex flex-col ml-5 w-[60%] h-[80%] mt-10 bg-gray-100">
+                <div><p className="justify-left">{staff}</p></div>
+                <div className="">
+                    <button className='w-[15%] h-full rounded bg-yellow-500 mt-10 mb-10 ml-20 p-1 text-xl'
+                        onClick={() => setPageNo(pageNo - 1)} >
+                        Back
+                    </button>
+
+                    <button className='w-[15%] h-full rounded bg-blue-500 mt-10 mb-10 ml-96 p-1 text-xl'
+                        onClick={() => setPageNo(pageNo + 1)} >
+                        Next
+                    </button>
+                </div>   
+            </div>
+            <div className="w-[20%] h-full"></div>
+        </div>
+    );
+}
+export default StaffSummary;
