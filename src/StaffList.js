@@ -11,7 +11,7 @@ export const staffdata = [
     designation: "Najim_e_Emtihan", 
     contact_no: "01913500453", 
     e_mail: "haiatululya@gmail.com", 
-    room_no: 301,
+    room_no: "Room No : 301",
     image: ""
 }, 
 {
@@ -21,10 +21,12 @@ export const staffdata = [
     mother: "Mrs Shamima Akter Parvin",
     present_address: "polsupur, Donia-1236, Kadamtali, Dakha.",
     permanent_ddress: "Jafrabad, Puran Bazar, Chandpur.",
+    academic_achievement: "Dawra-e-Hadis.",
+    languages_skills: "Bengali, Arabic, English & Urdu.",
     designation: "Office Secretary", 
     contact_no: "01305656703", 
     e_mail: "osiur2@gmail.com", 
-    room_no: 201,
+    room_no: "Room No : 201",
     image: "mdosiurrahman.jpg",
 },
 {
@@ -34,25 +36,27 @@ export const staffdata = [
     mother: "Rabeya Begum.",
     present_address: "80/E, Bibir Bagich-1, Jatrabari, Dhaka.",
     permanent_ddress: "Poradanga, Poradanga, Monirampur, Jashore.",
+    academic_achievement: "Dawra-e-Hadis.",
+    languages_skills: "Bengali, Arabic, English & Urdu.",
     designation: "Head of Accounts", 
     contact_no: "01935650801", 
     e_mail: "haiatululya@gmail.com", 
-    room_no: 203,
+    room_no: "Room No : 203",
     image: "amalik.jpg" 
 },
 {
     id: 4,
     name: "Md Sharif Hossain",
-    father: "let MD Khowaz Molla.",
-    mother: "Mst. Rina Begum.", 
-    present_address: "House 20, Road 6, Palashpur, Donia, Kadamtoli, Dhaka.",
-    permanent_ddress: "Sholdhara, Butoni, Ghior, Manikganj.",
-    academic_achievement: "B.B.A (Hon’s)",
-    languages_skills: "Bengali & English.",
-    designation: "Senior Assistent", 
-    contact_no: "01305656706", 
-    e_mail: "test@gmail.com", 
-    room_no: 302,
+    father: "Father : Let MD Khowaz Molla.",
+    mother: "Mother : Mst. Rina Begum.", 
+    present_address: "Present_address : House 20, Road 6, Palashpur, Donia, Kadamtoli, Dhaka.",
+    permanent_ddress: "Permanent_ddress : Sholdhara, Butoni, Ghior, Manikganj.",
+    academic_achievement: "Academic_achievement : B.B.A (Hon’s)",
+    languages_skills: "Languages_skills : Bengali & English.",
+    designation: "Designation : Senior Assistent", 
+    contact_no: "Contact_no : 01305656706", 
+    e_mail: "E_mail : test@gmail.com", 
+    room_no: "Room No : 302",
     image: ""
 
 },
@@ -68,7 +72,7 @@ export const staffdata = [
     designation: "Senior Assistant", 
     contact_no: "01674014986", 
     e_mail: "aliullahk94@gmail.com", 
-    room_no: 303,
+    room_no: "Room No : 303",
     image: "aliullah.jpg"
 },
 {
@@ -83,7 +87,7 @@ export const staffdata = [
     designation: "Senior Assistant", 
     contact_no: "01681-681201", 
     e_mail: "mewfaru@gmail.com", 
-    room_no: 203,
+    room_no: "Room No : 203",
     image: "farhan.jpeg"
 },
 {
@@ -98,7 +102,7 @@ export const staffdata = [
     designation: "Computer Operator", 
     contact_no: "01923-114855", 
     e_mail: "mazedmahmud333@gmail.com", 
-    room_no: 303,
+    room_no: "Room No : 303",
     image: "amazed.jpeg"
 },
 {
@@ -113,7 +117,7 @@ export const staffdata = [
     designation: "Computer Operator", 
     contact_no: "01615-650993", 
     e_mail: "haiatululya@gmail.com", 
-    room_no: 302,
+    room_no: "Room No : 302",
     image: "abdullahrashed.jpeg"
 },
 {
@@ -128,7 +132,7 @@ export const staffdata = [
     designation: "Computer Operator", 
     contact_no: "01676-619225", 
     e_mail: "mahmudsaide@yahoo.com", 
-    room_no: 302,
+    room_no: "Room No : 302",
     image: "mahmudsayed.jpeg"
 },
 {
@@ -143,7 +147,7 @@ export const staffdata = [
     designation: "Computer Operator", 
     contact_no: "01675497066", 
     e_mail: "omarfaruk01245@gmail.com", 
-    room_no: 200,
+    room_no: "Room No : 200",
     image: "omarfaruk.jpeg"
 },
 {
@@ -158,7 +162,7 @@ export const staffdata = [
     designation: "Computer Operator", 
     contact_no: "01628-854849", 
     e_mail: "tazuddin4@gmail.com", 
-    room_no: 302,
+    room_no: "Room No : 302",
     image: "tazuddin.jpeg"
 },
 {
@@ -173,7 +177,7 @@ export const staffdata = [
     designation: "Computer Operator", 
     contact_no: "01732224212", 
     e_mail: "pmpublication78@gmail.com", 
-    room_no: 302,
+    room_no: "Room No : 302",
     image: "nazrulislam.jpeg"
 },
 {
@@ -188,7 +192,7 @@ export const staffdata = [
     designation: "Computer Operator", 
     contact_no: "01615650992", 
     e_mail: "shoaeebmew.12345@gmail.com", 
-    room_no: 302,
+    room_no: "Room No : 302",
     image: "shuyaib.jpg"
 },
 {
@@ -203,7 +207,7 @@ export const staffdata = [
     designation: "OFFICE ASSISTANT", 
     contact_no: "01919199238", 
     e_mail: "mmsirazul@gmail.com", 
-    room_no: 302,
+    room_no: "Room No : 302",
     image: "sirazulislam.jpeg"
 },
 
@@ -216,10 +220,10 @@ export const staffdata = [
     permanent_ddress: "Village-Sheakhergaon, post- Luterchor, p.s- Meghna, dist- Comilla",
     academic_achievement: "SSC & HSC",
     languages_skills: "Bengali, Arabic, English & Urdu.",
-    designation: "ASSistent Computer Operator", 
+    designation: "Assistent Computer Operator", 
     contact_no: "01832-237179", 
     e_mail: "habibhm660@gmail.com", 
-    room_no: 304,
+    room_no: "Room No : 304",
     image: "habib.jpg"
 },
 {
@@ -228,13 +232,13 @@ export const staffdata = [
     father: "Md Siddiqur Rahman ",
     mother: "Mst Halima Begam",
     present_address: "Rayerbagh, Matuail, Kadamtaly, Dhaka",
-    permanent_ddress: "Potuakhali, Lamna, Galachipa, Barishal",
+    permanent_address: "Potuakhali, Lamna, Galachipa, Barishal",
     academic_achievement: "SSC",
     languages_skills: "Bengali.",
     designation: "Khadim", 
     contact_no: "01736-428757", 
     e_mail: "habibhm660@gmail.com", 
-    room_no: 304,
+    room_no: "Room No : 304",
     image: "masum.jpg"
 },
 ]
