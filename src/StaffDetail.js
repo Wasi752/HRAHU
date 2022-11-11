@@ -1,6 +1,9 @@
 import StaffSummary from "./StaffList";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import Form from "./Form";
+import data from "./data";
+
 
 function StaffDetail({ i, id, name, father, mother, present_address, permanent_address, academic_achievement, languages_skills, designation, contact_no, e_mail, room_no, image }) {
 
@@ -34,6 +37,7 @@ function StaffDetails() {
     const idNo = parseInt(menu);
     const [pageNo, setPageNo] = useState(1);
     const [staff, setStaff] = useState();
+    const [users, setUsers] = useState(data);
 
     useEffect(() => {
         fetch('https://mocki.io/v1/10e2cef1-2965-41d8-b94e-984e14deb6de')
@@ -64,11 +68,16 @@ function StaffDetails() {
 
     return (
         <div className="w-full h-full flex">
-            <div className="w-[20%] h-full bg-yellow-100">
-                <p className="text-2xl font-serif font-extrabold ml-10 mb-5 mt-40 text-blue-500">Staff Details</p>
+            <div className="w-[30%] h-full flex flex-row mt-20">
+                <Form/>
             </div>
-            <div className="flex flex-col ml-5 w-[60%] h-[80%] mt-20 bg-gray-100">
-                <div><p className="justify-left">{staff}</p></div>
+            <div className="flex flex-col ml-5 w-[60%] h-[80%] mt-10 bg-gray-100">
+                <p className="text-2xl font-serif font-extrabold ml-10 mb-5 mt-5 text-blue-500">Staff Details</p>
+
+                <div>
+                    <p className="justify-left">{staff}</p>
+                    
+                </div>
                 <div>
                     <Link to={"/sdetails/" + (idNo - 1)} >
                         <button className='w-[15%] h-full rounded bg-yellow-500 mt-10 mb-10 ml-20 p-1 text-xl'
@@ -82,7 +91,7 @@ function StaffDetails() {
                         </button></Link>
                 </div>
             </div>
-            <div className="w-[20%] h-full"></div>
+            <div className="w-[5%] h-full"></div>
         </div>
     );
 }

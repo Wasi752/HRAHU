@@ -6,14 +6,15 @@ function Home() {
         <div className="w-full h-screen flex">
             <div className="w-[10%] h-full"></div>
             <div className="flex flex-col justify-center ml-40 w-[50%] h-[80%] mt-20 bg-gray-100">
-            <p className="text-3xl text-center mb-5 font-serif text-blue-500">Human Resource Department</p>
+            <p className="text-3xl text-center mb-5 font-serif text-blue-500">Human Resource Module</p>
                 <Link to="/summary" className={cName}>Staff Info</Link>
-                <Link to="/counter" className={cName}>Pay Scal</Link>
-                <Link to="/fetch" className={cName}>Work Flow</Link>
-                <Link to="/time" className={cName}>Exam & Certificate</Link>
-                <Link to="/color" className={cName}>Rulls & Regulation</Link>
-                <Link to="/bulb" className={cName}>Office Time & Present Count</Link>
-                <Link to="/effect" className={cName}>Event</Link>
+                <Link to="/counter" className={cName}>Payroll</Link>
+                <Link to="/counter" className={cName}>Recruitment</Link>
+                <Link to="/fetch" className={cName}>Works & Event</Link>
+                <Link to="/color" className={cName}>ACR</Link>
+                <Link to="/bulb" className={cName}>Attendance</Link>
+                <Link to="/effect" className={cName}>Leave information</Link>
+                <Link to="/form" className={cName}>Form</Link>
             </div>
             <div className="w-[10%] h-full"></div>
         </div>
