@@ -1,7 +1,5 @@
-import StaffDetails from "./StaffDetail";
 import {Link} from "react-router-dom";
 import { useEffect, useState } from 'react';
-import { data } from "autoprefixer";
 
 
 function StaffSummaryDiv({id, name, designation, contact_no, e_mail, image, i}){
@@ -33,7 +31,7 @@ function StaffSummary(){
     const [staff, setStaff] = useState();
     
     useEffect(() => {
-        fetch('https://mocki.io/v1/10e2cef1-2965-41d8-b94e-984e14deb6de')
+        fetch('http://localhost:3000/staff/')
       .then((response) => response.json())
       .then((data) => {
     const xyz = data

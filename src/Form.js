@@ -58,7 +58,7 @@ function Form({setX}){
                         <button 
                             type="button"
                             onClick={submit} 
-                            className="text-center text-1xl text-white font-bold h-[80%] w-[85%] ml-10 bg-blue-600 hover:text-blue-300 p-3 border rounded-md ">Submit</button>
+                            className="text-center text-1xl text-white font-bold h-[80%] w-[80%] ml-10 bg-blue-600 hover:text-blue-300 p-3 border rounded-md ">Submit</button>
                     </div>
                 </div>
                 

@@ -43,7 +43,7 @@ function StaffDetails() {
     const [user, setUser] = useState();
 
     useEffect(() => {
-        fetch('https://mocki.io/v1/10e2cef1-2965-41d8-b94e-984e14deb6de')
+        fetch('http://localhost:3000/staff/')
             .then((response) => response.json())
             .then((data) => {
                 const x = data[0];
