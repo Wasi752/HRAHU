@@ -10,7 +10,7 @@ function Home() {
                 <Link to="/summary" className={cName}>Staff Info</Link>
                 <Link to="/counter" className={cName}>Payroll</Link>
                 <Link to="/counter" className={cName}>Recruitment</Link>
-                <Link to="/fetch" className={cName}>Works & Event</Link>
+                <Link to="/work" className={cName}>Works & Event</Link>
                 <Link to="/color" className={cName}>ACR</Link>
                 <Link to="/bulb" className={cName}>Attendance</Link>
                 <Link to="/effect" className={cName}>Leave information</Link>
