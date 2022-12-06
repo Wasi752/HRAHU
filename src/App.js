@@ -1,11 +1,11 @@
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from './Home';
 import StaffSummary from './StaffList';
 import StaffDetails from './StaffDetail';
 import Form from './Form';
 import WorksEvent from './WorksEvent';
-import Result from './Result';
+import MadrasaResult from './MadrasaResult';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="/sdetails/:menu" element={<StaffDetails />} />
         <Route path="/form" element={<Form />} />
         <Route path="/work" element={<WorksEvent />} />
-        <Route path="/result" element={<Result/>} />
+        <Route path="/mresult" element={<MadrasaResult/>} />
         
 
         
