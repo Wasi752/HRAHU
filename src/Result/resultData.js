@@ -8,7 +8,7 @@ export const results = [
       muslim1: 88,
       muslim2: 89,
       tirmizi1: 90,
-      tirmizi_2: 94,
+      tirmizi2: 94,
       abudaud: 81,
       nasayee: 92,
       tahabi: 83,
@@ -214,7 +214,7 @@ export const results = [
       bukhari1: 37,
       bukhari2: 48,
       muslim1: 43,
-      nuslim2: 49,
+      muslim2: 49,
       tirmizi1: 54,
       tirmizi2: 41,
       abudaud: 66,
@@ -240,4 +240,3 @@ export const results = [
       id: 15
     }  
 ]
-console.log(JSON.stringify(results));

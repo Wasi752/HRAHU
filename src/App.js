@@ -1,11 +1,11 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Home from './Home';
-import StaffSummary from './StaffList';
-import StaffDetails from './StaffDetail';
-import Form from './Form';
+import StaffSummary from './Staff/StaffList';
+import StaffDetails from './Staff/StaffDetail';
+import Form from './Staff/Form';
 import WorksEvent from './WorksEvent';
-import MadrasaResult from './MadrasaResult';
+import MadrasaResults from './Result/MadrasaResult';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/sdetails/:menu" element={<StaffDetails />} />
         <Route path="/form" element={<Form />} />
         <Route path="/work" element={<WorksEvent />} />
-        <Route path="/madrasa" element={<MadrasaResult />} />
+        <Route path="/madrasa" element={<MadrasaResults />} />
         
         
 
