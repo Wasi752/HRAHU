@@ -43,7 +43,7 @@ function StaffDetails() {
     const [user, setUser] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:3000/staff/')
+        fetch('http://localhost:3000/staff')
             .then((response) => response.json())
             .then((data) => {
                 const x = data[0];

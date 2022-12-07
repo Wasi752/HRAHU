@@ -7,7 +7,6 @@ import Form from './Form';
 import WorksEvent from './WorksEvent';
 import MadrasaResult from './MadrasaResult';
 
-
 function App() {
   return (
     <div className="w-full h-full">
@@ -17,7 +16,8 @@ function App() {
         <Route path="/sdetails/:menu" element={<StaffDetails />} />
         <Route path="/form" element={<Form />} />
         <Route path="/work" element={<WorksEvent />} />
-        <Route path="/mresult" element={<MadrasaResult/>} />
+        <Route path="/madrasa" element={<MadrasaResult />} />
+        
         
 
         
