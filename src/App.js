@@ -10,6 +10,7 @@ import MadrasaResults from './Result/MadrasaResult';
 import StudentResult from './Result/StudentResult';
 import {results} from './Result/resultData';
 import StudentResults from './Result/StudentResult';
+import FooterAFNavbar from './Home/Footer/Footer';
 
 function App() {
   return (
@@ -24,10 +25,8 @@ function App() {
         <Route path="/madrasa" element={<MadrasaResults mname={results[0].mname}/>} />
         <Route path="/student/:mad" element={<StudentResults/>} />
         
-        
-
-        
       </Routes>
+      <FooterAFNavbar/>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function Menu({ name, link }) {
         <Link to={link}><span className={kalar}>{name}</span></Link>
     );
 }
-const menuName = [
+export const menuName = [
     "Home", 
     "Committee",
     "Boards",
@@ -19,20 +19,20 @@ const menuName = [
     "Contact", 
     "Recruitment"
 ];
-const menuLink = [
+export const menuLink = [
     "/",
-    "/summary",
-    "/sdetails/:menu",
-    "/work",
+    "/committee",
+    "/board",
     "/madrasa",
+    "/work",
     "/student/1",
     "/publication",
     "/download",
     "/about",
     "/contact",
-    "/recruitment"
+    "/recruit"
 ];
-const navbar = menuName.map((x, i) => <Menu name={menuName[i]} link= {menuLink[i]}/>);
+export const navbar = menuName.map((x, i) => <Menu name={menuName[i]} link= {menuLink[i]}/>);
 
 function HeaderANavbar() {
     return(
