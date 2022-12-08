@@ -6,7 +6,8 @@ export const boardList = [
         name_english: "Wifaqul Madarisil Arabia Bangladesh",
         address: "Kazla (Vangga Press), Dania, Jatrabari, Dhaka",
         e_mail: "wifaqbd@gmail.com",
-        phone: "01670474797, 01924722711"
+        phone: "01670474797, 01924722711",
+        code: 101
     },
     {
         name_arabic: "وفاق المدارس العربيه القوميه جوهر دنجه بنغلاديش ",
@@ -14,7 +15,8 @@ export const boardList = [
         name_english: "Wifaqul Madarisil Qawmia Gawhardanga Bangladesh",
         address: "Darul Uloom Khadimul Islam Madrasa, Gawhardanga, Tungipara, Gopalgang",
         e_mail: "gawhardangaboard@gmail.com",
-        phone: "01935545515, 01716886687"
+        phone: "01935545515, 01716886687",
+        code: 102
     },
     {
         name_arabic: "انجمن الاتحاد المدارس بنغلاديش",
@@ -22,7 +24,8 @@ export const boardList = [
         name_english: "Anzuman-e Ittehadul Madaris, Chittagong, Bangladesh",
         address: "Al Jamia Al Islamia, Potia, Chittagong",
         e_mail: "jamiapotia@gmail.com",
-        phone: "01671337788, 01819065606"
+        phone: "01671337788, 01819065606",
+        code: 103
     },
     {
         name_arabic: "ازاد ديني اداره تعليم بنغلاديش ",
@@ -30,7 +33,8 @@ export const boardList = [
         name_english: "Azad Dini Adara-e Talim sylhat, Bangladesh",
         address: "Adara Manjil, Subhani Ghat, Sadar, Sylhat",
         e_mail: "azaddiniadara@gmail.com",
-        phone: "01714704152, 01712601132"
+        phone: "01714704152, 01712601132",
+        code: 104
     },
     {
         name_arabic: "تنظيم المدارس الدينيه بنغلاديش",
@@ -38,7 +42,8 @@ export const boardList = [
         name_english: "Tazimul Madarisid Dinia Bangladesh",
         address: "Al Jamia Al Islamia Jamil Madrasa, Sadar, Bagura",
         e_mail: "tanzimulmadaris@gmail.com",
-        phone: "01819469667, 01718407278"
+        phone: "01819469667, 01718407278",
+        code: 105
     },
     {
         name_arabic: "وفاق المدارس الدينيه بنغلاديش",
@@ -46,6 +51,7 @@ export const boardList = [
         name_english: "Jatia Dini Madrasa Shikkhaboard Bangladesh",
         address: "House No ## 120 , Road No ## 5, Block## A, Aftabnagar, Badda, Dhaka",
         e_mail: "bmadarisiddinia@gmail.com",
-        phone: "01712223926, 01841419003"
+        phone: "01712223926, 01841419003",
+        code: 106
     }
 ];

@@ -11,6 +11,7 @@ import StudentResult from './Result/StudentResult';
 import {results} from './Result/resultData';
 import StudentResults from './Result/StudentResult';
 import FooterAFNavbar from './Home/Footer/Footer';
+import MadrasaRegForm from './Registration/MadrasaRegForm';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/work" element={<WorksEvent />} />
         <Route path="/madrasa" element={<MadrasaResults mname={results[0].mname}/>} />
         <Route path="/student/:mad" element={<StudentResults/>} />
+        <Route path="/reg/madrasa" element={<MadrasaRegForm/>} />
         
       </Routes>
       <FooterAFNavbar/>

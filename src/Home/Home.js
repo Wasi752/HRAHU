@@ -24,7 +24,7 @@ const humanResourceLink = [
 const humanResourcesLink = humanResourceLink.map(x => <HomePage link={x.link} itemname={x.iname}/>);
 
 const workLink = [
-    {iname: "Registration",     link: "/reg" },
+    {iname: "Registration",     link: "/reg/madrasa" },
     {iname: "Form fill Up",     link: "/fillup" },
     {iname: "Center Manegment", link: "/center" },
     {iname: "Examination",      link: "/exam" },
@@ -37,7 +37,7 @@ const workLink = [
 const worksLink = workLink.map(x => <HomePage link={x.link} itemname={x.iname}/>);
 
 const examLink = [
-    {iname: "Registration",     link: "/reg" },
+    {iname: "Registration",     link: "/reg/madrasa" },
     {iname: "Form fill Up",     link: "/fillup" },
     {iname: "Center Manegment", link: "/center" },
     {iname: "Registration Card",link: "/regcard" },
