@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import {results} from './Result/resultData';
+import StudentResults from "./Result/StudentResult";
 
 function WorksEvent (){
     const cName = "border border-blue-300 w-[90%] p-3 ml-3 mb-2 text-xl text-center font-bold font-serif hover:text-blue-600";
@@ -10,13 +12,13 @@ function WorksEvent (){
                 <Link to="/counter" className={cName}>Form fill Up</Link>
                 <Link to="/counter" className={cName}>Center Manegment</Link>
                 <Link to="/work" className={cName}>Examination</Link>
-                <Link to="" className={cName}>Result</Link>
+                <Link to="/madrasa" className={cName}>Result</Link>
                 <Link to="/bulb" className={cName}>Certificate</Link>
                 <Link to="/effect" className={cName}>Scholarship</Link>
             </div>
             <div className="flex flex-col justify-center ml-10 w-[15%] h-[80%] mt-20 bg-gray-100">
-                <Link to="/studentresult" className={cName}>Student Result</Link>
-                <Link to="/madrasaresult" className={cName}>Madrasa's Result</Link>
+                <Link to={"/student/" + results[0].id} className={cName}>Student Result</Link>
+                <Link to="/madrasa" className={cName}>Madrasa's Result</Link>
             </div>
             <div className="flex flex-col justify-center ml-10 w-[15%] h-[80%] mt-20 bg-gray-100">
                 <p className="text-xl text-center font-bold font-serif">Enter Your Roll NO</p>

@@ -2,10 +2,10 @@ import { results } from "./resultData"
 
 
 function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
-    const tbl = "border p-2 text-left";
+    const tbl = "border border-blue-300 p-3 text-left text-xl";
     return (
         <div className="flex flex-col justify-center w-full h-[80%] mt-1 bg-gray-100">
-            <table className="w-[95%] h-[80%] border border-spacing-1 ml-10 text-left">
+            <table className="w-[90%] h-[80%] border ml-20 text-left">
                 
                 <tr>
                     <td className={tbl}> {srl}</td>
@@ -23,6 +23,7 @@ function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1, musli
                     <td className={tbl}> {muwattan}</td>
                     <td className={tbl}> {total}</td>
                     <td className={tbl}> {divi}</td>
+                    <td className={tbl}> {mscore}</td>
 
                 </tr>
             </table>
@@ -30,12 +31,30 @@ function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1, musli
 
     )
 };
-function MadrasaResults() {
-    const tbl = "border  p-5 text-center";
-    const folafol = results.map(y =>
+ results.map(c => c.bukhari1 + c.bukhari2 + c.muslim1 + c.muslim2 + c.tirmizi1 + c.tirmizi2 + c.abudaud + c.nasayee + c.tahabi + c.muwattan)
+        .forEach(d =>{
+        let division;
+            if(d > 799){
+                division = "Mumtaj";
+            } else if(d > 649){
+                division = "Jaiyed Jiddan";
+            } else if(d > 499){
+                division = "Jaiyed";
+            } else if(d > 329){
+                division = "Maqbul";
+            } else {
+                division = "Rasib";
+            }
+            console.log(d, division);
+        });
+        
+function MadrasaResults({mname}) {
+    const tbl = "border border-green-300 p-3 text-center";         
+    const madrasa1 = results.filter(k => k.mname === "Darul Uloom Al-Islamia Dhaka")
+        .map(y =>
             <MadrasaResult
-                srl={y.id}
-                roll={y.roll}
+                srl={y.id + 10}
+                roll={y.roll + 100}
                 name={y.name}
                 bukhari1={y.bukhari1}
                 bukhari2={y.bukhari2}
@@ -47,19 +66,15 @@ function MadrasaResults() {
                 nasayee={y.nasayee}
                 tahabi={y.tahabi}
                 muwattan={y.muwattan}
-                total={y.bukhari1 + y.bukhari2 + y.muslim1 + y.muslim2 + y.tirmizi1 + y.tirmizi2 + y.abudaud + y.nasayee + y.tahabi + y.muwattan}
-                />
+                total={y.bukhari1 + y.bukhari2 + y.muslim1 + y.muslim2 + y.tirmizi1 + y.tirmizi2 + y.abudaud + y.nasayee + y.tahabi + y.muwattan}/>
+                )
         
-    )
-
     return (
-        <div className="w-[90%] h-[80%] justify-center ml-10 mt-20 bg-gray-100">
-            <p className="text-3xl text-center pt-10 font-bold mb-5 font-serif text-blue-500">Dawra-e Hadis Examination-1443/2022</p>
+        <div className="w-[90%] h-[80%] justify-center ml-24 mt-20 bg-gray-100">
+            <p className="text-5xl text-center pt-10 font-bold mb-5 font-serif text-blue-500">Dawra-e Hadis Examination-1443/2022</p>
             <p className="text-3xl text-center mt-1 font-bold mb-5 font-serif">Al-Haiatul Ulya Lil-Jamiatil Qawmia Bangladesh</p>
-            <p className="text-3xl text-left ml-10 mt-10 font-bold mb-5 font-serif text-blue-500">Madrasa :{results.mname}</p>
-            
-            <table className="w-[95%] h-[80%] border border-spacing-1 ml-10 text-center">
-
+            <p className="text-3xl text-left ml-10 mt-10 font-bold mb-5 font-serif text-blue-500">Madrasa : {mname}</p>
+            <table className="w-[90%] h-[80%] border border-spacing-1 ml-20 text-left">
                 <tr>
                     <th className={tbl}>Srl</th>
                     <th className={tbl}>Roll</th>
@@ -78,11 +93,12 @@ function MadrasaResults() {
                     <th className={tbl}>Class</th>
                     <th className={tbl}>M Score</th>
                 </tr>
-                
             </table>
-            <div>{folafol}</div>
+            <div className="justify-left">{madrasa1}</div>
+            
             
         </div>
     )
 }
+
 export default MadrasaResults;			    

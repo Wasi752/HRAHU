@@ -34,7 +34,7 @@ export const results = [
     {      
       mname: "Darul Uloom Al-Islamia Dhaka",
       roll: 3,
-      name: "Mominul Islam",
+      name: "Momin Islam",
       bukhari1: 89,
       bukhari2: 75,
       muslim1: 85,
@@ -50,7 +50,7 @@ export const results = [
     {      
       mname: "Darul Uloom Al-Islamia Dhaka",
       roll: 4,
-      name: "Mamunul Haque",
+      name: "Mamnun Haq",
       bukhari1: 69,
       bukhari2: 75,
       muslim1: 65,
@@ -66,7 +66,7 @@ export const results = [
     {      
       mname: "Darul Uloom Al-Islamia Dhaka",
       roll: 5,
-      name: "Ahmadul Haque",
+      name: "Ahmadul Haq",
       bukhari1: 60,
       bukhari2: 65,
       muslim1: 59,
@@ -82,7 +82,7 @@ export const results = [
     {      
       mname: "Darul Uloom Al-Islamia Dhaka",
       roll: 6,
-      name: "Ahmadullah",
+      name: "Ahmad Ullah",
       bukhari1: 60,
       bukhari2: 61,
       muslim1: 59,
@@ -130,7 +130,7 @@ export const results = [
     {      
       mname: "Darul Uloom Al-Islamia Dhaka",
       roll: 9,
-      name: "Basim",
+      name: "AhmadBasim",
       bukhari1: 33,
       bukhari2: 41,
       muslim1: 39,
@@ -146,7 +146,7 @@ export const results = [
     {      
       mname: "Darul Uloom Al-Islamia Dhaka",
       roll: 10,
-      name: "Bahauddin",
+      name: "A Bahauddin",
       bukhari1: 33,
       bukhari2: 31,
       muslim1: 32,
@@ -210,7 +210,7 @@ export const results = [
     {      
       mname: "Baytul Uloom Al-Islamia Dhaka",
       roll: 14,
-      name: "Noman",
+      name: "Noman Ali",
       bukhari1: 37,
       bukhari2: 48,
       muslim1: 43,
@@ -226,7 +226,7 @@ export const results = [
     {      
       mname: "Baytul Uloom Al-Islamia Dhaka",
       roll: 15,
-      name: "Nazimuddin Arbakan",
+      name: "Nazimuddin",
       bukhari1: 33,
       bukhari2: 31,
       muslim1: 32,
