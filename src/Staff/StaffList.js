@@ -31,7 +31,7 @@ function StaffSummary(){
     const [staff, setStaff] = useState();
     
     useEffect(() => {
-        fetch('http://localhost:3000/staff')
+        fetch('http://localhost:3001/staff')
       .then((response) => response.json())
       .then((data) => {
     const xyz = data
@@ -52,7 +52,7 @@ function StaffSummary(){
     
     return(
         <div className="w-full h-full flex">
-            <div className="w-[20%] h-full bg-green-100">
+            <div className="w-[20%] h-full bg-green-100 mt-10">
             <p className="text-2xl font-serif font-extrabold ml-10 mb-5 mt-40 text-blue-500">Staff Summary</p>
             </div>
             <div className="flex flex-col ml-5 w-[60%] h-[80%] mt-10 bg-gray-100">

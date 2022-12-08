@@ -43,7 +43,7 @@ function StaffDetails() {
     const [user, setUser] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:3000/staff')
+        fetch('http://localhost:3001/staff')
             .then((response) => response.json())
             .then((data) => {
                 const x = data[0];
@@ -74,7 +74,7 @@ function StaffDetails() {
             <div className="w-[30%] h-full flex flex-row mt-20">
                 <Form setX={setUser} />
             </div>
-            <div className="flex flex-col ml-5 w-[60%] h-[80%] mt-10 bg-gray-100">
+            <div className="flex flex-col ml-5 w-[60%] h-[80%] mt-20 bg-gray-100">
                 <p className="text-2xl font-serif font-extrabold ml-10 mb-5 mt-5 text-blue-500">Staff Details</p>
 
                 <div>

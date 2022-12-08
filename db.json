@@ -3,8 +3,8 @@
     {
       "id": 1,
       "name": "Mawlana Muhammad Ismayeel",
-      "father": ".",
-      "mother": ".",
+      "father": "Adam (a)",
+      "mother": "Hawwa (a)",
       "present_address": "Kamrangir Char, Dakha.",
       "permanent_ddress": "Barishal.",
       "academic_achievement": "Dawra-e-Hadis.",
@@ -13,7 +13,7 @@
       "contact_no": "01913500453",
       "e_mail": "haiatululya@gmail.com",
       "room_no": "Room No : 301",
-      "image": "najemsaheb.jpg"
+      "image": "staff/najemsaheb.jpg"
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "contact_no": "01305656703",
       "e_mail": "osiur2@gmail.com",
       "room_no": "Room No : 201",
-      "image": "mdosiurrahman.jpg"
+      "image": "staff/mdosiurrahman.jpg"
     },
     {
       "id": 3,
@@ -43,7 +43,7 @@
       "contact_no": "01935650801",
       "e_mail": "haiatululya@gmail.com",
       "room_no": "Room No : 203",
-      "image": "amalik.jpg"
+      "image": "staff/amalik.jpg"
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       "contact_no": "Contact_no : 01305656706",
       "e_mail": "E_mail : test@gmail.com",
       "room_no": "Room No : 302",
-      "image": "sharif.jpg"
+      "image": "staff/sharif.jpg"
     },
     {
       "id": 5,
@@ -73,7 +73,7 @@
       "contact_no": "01674014986",
       "e_mail": "aliullahk94@gmail.com",
       "room_no": "Room No : 303",
-      "image": "aliullah.jpg"
+      "image": "staff/aliullah.jpg"
     },
     {
       "id": 6,
@@ -88,7 +88,7 @@
       "contact_no": "01681-681201",
       "e_mail": "mewfaru@gmail.com",
       "room_no": "Room No : 203",
-      "image": "farhan.jpeg"
+      "image": "staff/farhan.jpeg"
     },
     {
       "id": 7,
@@ -103,7 +103,7 @@
       "contact_no": "01923-114855",
       "e_mail": "mazedmahmud333@gmail.com",
       "room_no": "Room No : 303",
-      "image": "amazed.jpeg"
+      "image": "staff/amazed.jpeg"
     },
     {
       "id": 8,
@@ -118,7 +118,7 @@
       "contact_no": "01615-650993",
       "e_mail": "haiatululya@gmail.com",
       "room_no": "Room No : 302",
-      "image": "abdullahrashed.jpeg"
+      "image": "staff/abdullahrashed.jpeg"
     },
     {
       "id": 9,
@@ -133,7 +133,7 @@
       "contact_no": "01676-619225",
       "e_mail": "mahmudsaide@yahoo.com",
       "room_no": "Room No : 302",
-      "image": "mahmudsayed.jpeg"
+      "image": "staff/mahmudsayed.jpeg"
     },
     {
       "id": 10,
@@ -148,7 +148,7 @@
       "contact_no": "01675497066",
       "e_mail": "omarfaruk01245@gmail.com",
       "room_no": "Room No : 200",
-      "image": "omarfaruk.jpeg"
+      "image": "staff/omarfaruk.jpeg"
     },
     {
       "id": 11,
@@ -163,7 +163,7 @@
       "contact_no": "01628-854849",
       "e_mail": "tazuddin4@gmail.com",
       "room_no": "Room No : 302",
-      "image": "tazuddin.jpeg"
+      "image": "staff/tazuddin.jpeg"
     },
     {
       "id": 12,
@@ -178,7 +178,7 @@
       "contact_no": "01732224212",
       "e_mail": "pmpublication78@gmail.com",
       "room_no": "Room No : 302",
-      "image": "nazrulislam.jpeg"
+      "image": "staff/nazrulislam.jpeg"
     },
     {
       "id": 13,
@@ -193,7 +193,7 @@
       "contact_no": "01615650992",
       "e_mail": "shoaeebmew.12345@gmail.com",
       "room_no": "Room No : 302",
-      "image": "shuyaib.jpg"
+      "image": "staff/shuyaib.jpg"
     },
     {
       "id": 14,
@@ -208,7 +208,7 @@
       "contact_no": "01919199238",
       "e_mail": "mmsirazul@gmail.com",
       "room_no": "Room No : 302",
-      "image": "sirazulislam.jpeg"
+      "image": "staff/sirazulislam.jpeg"
     },
     {
       "id": 15,
@@ -223,7 +223,7 @@
       "contact_no": "01832-237179",
       "e_mail": "habibhm660@gmail.com",
       "room_no": "Room No : 304",
-      "image": "habib.jpg"
+      "image": "staff/habib.jpg"
     },
     {
       "id": 16,
@@ -238,7 +238,7 @@
       "contact_no": "01736-428757",
       "e_mail": "habibhm660@gmail.com",
       "room_no": "Room No : 304",
-      "image": "masum.jpg"
+      "image": "staff/masum.jpg"
     }
   ],
   "results": [

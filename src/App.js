@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Home from './Home';
+import Home from './Home/Home';
+import HeaderANavbar from './Home/HeaderANavbar';
 import StaffSummary from './Staff/StaffList';
 import StaffDetails from './Staff/StaffDetail';
 import Form from './Staff/Form';
@@ -13,6 +14,7 @@ import StudentResults from './Result/StudentResult';
 function App() {
   return (
     <div className="w-full h-full">
+      <HeaderANavbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/summary" element={<StaffSummary />} />
