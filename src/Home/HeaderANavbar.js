@@ -17,7 +17,8 @@ export const menuName = [
     "Dawnload", 
     "About", 
     "Contact", 
-    "Recruitment"
+    "Recruitment",
+    "Notice Board"
 ];
 export const menuLink = [
     "/",
@@ -30,7 +31,8 @@ export const menuLink = [
     "/download",
     "/about",
     "/contact",
-    "/recruit"
+    "/recruit",
+    "/notice"
 ];
 export const navbar = menuName.map((x, i) => <Menu name={menuName[i]} link= {menuLink[i]}/>);
 

@@ -51,7 +51,7 @@ const examsLink = examLink.map(x => <HomePage link={x.link} itemname={x.iname}/>
 
 const certificateLink = [
     {iname: "Certificate",     link: "/certificate" },
-    {iname: "Prov certificate",link: "/pcertificate" },
+    {iname: "Prov Certificate",link: "/pcertificate" },
     {iname: "Marksheet",       link: "/mark" },
     {iname: "Prov Marksheet",  link: "/pmark" },
     {iname: "Testimonial",     link: "/testi" },
