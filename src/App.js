@@ -12,6 +12,7 @@ import {results} from './Result/resultData';
 import StudentResults from './Result/StudentResult';
 import FooterAFNavbar from './Home/Footer/Footer';
 import MadrasaRegForm from './Registration/MadrasaRegForm';
+import MadrasaLists from './Registration/MadrasaList';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/madrasa" element={<MadrasaResults mname={results[0].mname}/>} />
         <Route path="/student/:menu" element={<StudentResults/>} />
         <Route path="/reg/madrasa" element={<MadrasaRegForm/>} />
+        <Route path="/reg/madrasa/madrasalist" element={<MadrasaLists/>} />
         
       </Routes>
       <FooterAFNavbar/>

@@ -47,8 +47,8 @@ results.map(c => c.bukhari1 + c.bukhari2 + c.muslim1 + c.muslim2 + c.tirmizi1 + 
             }
             console.log(d, division);
         });
+
 function MadrasaResults({mname}) {
-    
     const tbl = "border border-green-300 p-3 text-center";         
     const madrasa1 = results.filter(k => k.mname === "Darul Uloom Al-Islamia Dhaka")
         .map(y =>
