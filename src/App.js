@@ -24,7 +24,7 @@ function App() {
         <Route path="/form" element={<Form />} />
         <Route path="/work" element={<WorksEvent />} />
         <Route path="/madrasa" element={<MadrasaResults mname={results[0].mname}/>} />
-        <Route path="/student/:mad" element={<StudentResults/>} />
+        <Route path="/student/:menu" element={<StudentResults/>} />
         <Route path="/reg/madrasa" element={<MadrasaRegForm/>} />
         
       </Routes>

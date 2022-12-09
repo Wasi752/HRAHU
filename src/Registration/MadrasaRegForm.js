@@ -35,7 +35,7 @@ function MadrasaRegForm() {
             division: division
         };
 
-        fetch('http://localhost:3002/create-madrasa', {
+        fetch('http://localhost:3001/create-employee', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -45,10 +45,11 @@ function MadrasaRegForm() {
             .then((response) => window.alert("Data is Sent"));
     };
     return (
-        <div className="w-full h-full flex ">
-
-            <div className="w-[80%] h-full bg-gray-100 p-5 justify-center mt-10 flex flex-col ">
-                <p className="mt-10 ml-40 text-3xl text-blue-700 font-bold font-serif text-left">Input Madrasa Information</p>
+        <div className="w-full h-full mb-56 mt-10">
+            <p className="text-center text-5xl text-green-700 font-bold font-serif mt-20">Madrasa Registration</p>
+            <p className="text-center text-3xl text-red-700 font-bold font-serif mt-5">Al Haiatul Ulya Lil-Jamiatil Qawmia Bangladesh</p>
+            <div className="w-[80%] h-full ml-56 bg-gray-100 p-5 justify-center mt-10 flex flex-col ">
+                <p className="mt-10 ml-40 mb-5 text-3xl text-blue-700 font-bold font-serif text-left">Enter Your Madrasa Information</p>
                 <div className="mt-1 ml-40"><label className={lcl}>Name of Madrasa :</label>
                     <input
                         type="text"
@@ -160,15 +161,15 @@ function MadrasaRegForm() {
                                 className="h-[10%] w-[80%] p-4 border border-blue-300 rounded-md mt-1 ml-10"
                             />
                         </div>
-                        
+
                     </div>
                 </div>
                 <div className="ml-40 w-[80%] h-[10%] flex">
-                            <button
-                                type="button"
-                                onClick={submit}
-                                className="text-center text-2xl ml-40 text-white font-bold h-[80%] w-[80%] bg-blue-600 hover:text-blue-300 p-4 mt-5 border rounded-md ">Submit</button>
-                </div>    
+                    <button
+                        type="button"
+                        onClick={submit}
+                        className="text-center text-2xl ml-44 text-white font-bold h-[80%] w-[74%] bg-blue-600 hover:text-blue-300 p-4 mt-5 border rounded-md ">Submit</button>
+                </div>
             </div>
         </div>
     )

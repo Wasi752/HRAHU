@@ -31,7 +31,7 @@ function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1, musli
 
     )
 };
- results.map(c => c.bukhari1 + c.bukhari2 + c.muslim1 + c.muslim2 + c.tirmizi1 + c.tirmizi2 + c.abudaud + c.nasayee + c.tahabi + c.muwattan)
+results.map(c => c.bukhari1 + c.bukhari2 + c.muslim1 + c.muslim2 + c.tirmizi1 + c.tirmizi2 + c.abudaud + c.nasayee + c.tahabi + c.muwattan)
         .forEach(d =>{
         let division;
             if(d > 799){
@@ -47,8 +47,8 @@ function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1, musli
             }
             console.log(d, division);
         });
-        
 function MadrasaResults({mname}) {
+    
     const tbl = "border border-green-300 p-3 text-center";         
     const madrasa1 = results.filter(k => k.mname === "Darul Uloom Al-Islamia Dhaka")
         .map(y =>
@@ -66,11 +66,12 @@ function MadrasaResults({mname}) {
                 nasayee={y.nasayee}
                 tahabi={y.tahabi}
                 muwattan={y.muwattan}
-                total={y.bukhari1 + y.bukhari2 + y.muslim1 + y.muslim2 + y.tirmizi1 + y.tirmizi2 + y.abudaud + y.nasayee + y.tahabi + y.muwattan}/>
+                total={y.bukhari1 + y.bukhari2 + y.muslim1 + y.muslim2 + y.tirmizi1 + y.tirmizi2 + y.abudaud + y.nasayee + y.tahabi + y.muwattan}
+                />
                 )
         
     return (
-        <div className="w-[90%] h-[80%] justify-center ml-24 mt-20 bg-gray-100">
+        <div className="w-[90%] h-[80%] justify-center ml-24 mt-20 bg-gray-100 mb-48">
             <p className="text-5xl text-center pt-10 font-bold mb-5 font-serif text-blue-500">Dawra-e Hadis Examination-1443/2022</p>
             <p className="text-3xl text-center mt-1 font-bold mb-5 font-serif">Al-Haiatul Ulya Lil-Jamiatil Qawmia Bangladesh</p>
             <p className="text-3xl text-left ml-10 mt-10 font-bold mb-5 font-serif text-blue-500">Madrasa : {mname}</p>

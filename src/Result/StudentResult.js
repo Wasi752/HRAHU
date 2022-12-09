@@ -55,8 +55,8 @@ function StudentResult({ id, mname, srl, roll, name, bukhari1, bukhari2, muslim1
 };
 function StudentResults() {
     
-    const { mad } = useParams();
-    const idNum = parseInt(mad);
+    const { menu } = useParams();
+    const idNum = parseInt(menu);
     const [page, setPage] = useState(1);
     const [sResult, setSResult] = useState();
 
@@ -85,7 +85,7 @@ function StudentResults() {
         
     }, [page]);
         return(
-            <div className="w-full h-full flex">
+            <div className="w-full h-full flex mb-56">
                 <div className="w-[5%] h-full mt-20"></div>
                 <div className="flex flex-col ml-1 w-[90%] h-[80%] mt-10 bg-gray-100">
                         <p className="justify-left">{sResult}</p>
