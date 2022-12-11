@@ -31,7 +31,7 @@ function StaffSummary(){
     const [staff, setStaff] = useState();
     
     useEffect(() => {
-        fetch('http://localhost:3001/staff')
+        fetch('http://localhost:3001/employees')
       .then((response) => response.json())
       .then((data) => {
     const xyz = data

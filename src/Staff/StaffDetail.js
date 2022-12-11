@@ -40,10 +40,10 @@ function StaffDetails() {
     const idNo = parseInt(menu);
     const [pageNo, setPageNo] = useState(1);
     const [staff, setStaff] = useState();
-    const [user, setUser] = useState();
+    
 
     useEffect(() => {
-        fetch('http://localhost:3001/staff')
+        fetch('http://localhost:3001/employees')
             .then((response) => response.json())
             .then((data) => {
                 const x = data[0];
@@ -64,17 +64,17 @@ function StaffDetails() {
                         e_mail={y.e_mail}
                         room_no={y.room_no}
                         image={y.image}
-                        user={user} />
+                        />
                 );
             });
-    }, [pageNo, user]);
+    }, [pageNo]);
 
     return (
         <div className="w-full h-full flex">
-            <div className="w-[30%] h-full flex flex-row mt-20">
-                <Form setX={setUser} />
+            <div className="w-[20%] h-full flex flex-row mt-20">
+                
             </div>
-            <div className="flex flex-col ml-5 w-[60%] h-[80%] mt-20 bg-gray-100">
+            <div className="flex flex-col w-[60%] h-[80%] mt-20 bg-gray-100">
                 <p className="text-2xl font-serif font-extrabold ml-10 mb-5 mt-5 text-blue-500">Staff Details</p>
 
                 <div>
@@ -94,7 +94,7 @@ function StaffDetails() {
                         </button></Link>
                 </div>
             </div>
-            <div className="w-[5%] h-full"></div>
+            <div className="w-[15%] h-full"></div>
         </div>
     );
 }

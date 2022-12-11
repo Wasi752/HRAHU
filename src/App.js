@@ -13,6 +13,7 @@ import StudentResults from './Result/StudentResult';
 import FooterAFNavbar from './Home/Footer/Footer';
 import MadrasaRegForm from './Registration/MadrasaRegForm';
 import MadrasaLists from './Registration/MadrasaList';
+import StaffForm from './Staff/Form';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/summary" element={<StaffSummary />} />
+        <Route path="/summary/staff" element={<StaffForm />} />
         <Route path="/sdetails/:menu" element={<StaffDetails />} />
         <Route path="/form" element={<Form />} />
         <Route path="/work" element={<WorksEvent />} />
