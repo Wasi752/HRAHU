@@ -35,7 +35,7 @@ function MadrasaRegForm() {
             division: division
         };
 
-        fetch('http://localhost:3001/create-employee', {
+        fetch('http://localhost:3001/create-madrasa', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

@@ -4,8 +4,8 @@ const tbl = "border border-blue-300 p-3 text-left text-xl";
 
 function MadrasaList({ id, code, ilhaq, mnamearabic, mnamebangali, mnameenglish, address, muhtamim, nazim, jela, divis, email, phone }) {
     return (
-        <div className="flex flex-col justify-center w-full h-full">
-
+        <div className="flex flex-col justify-center w-[80%] h-full ml-56">
+            <table className="w-full h-full text-justify border border-green-700">
             <tr className="w-full h-full ml-56">
                 <td className={tbl}> {id}</td>
                 <td className={tbl}> {code}</td>
@@ -21,17 +21,17 @@ function MadrasaList({ id, code, ilhaq, mnamearabic, mnamebangali, mnameenglish,
                 <td className={tbl}> {jela}</td>
                 <td className={tbl}> {divis}</td>
             </tr>
+            </table>
         </div>
     )
 }
 function MadrasaLists({ board }) {
     const [madrasaL, setMadrasaL] = useState("");
-    useEffect(() => {
-        fetch('http://localhost:3001/employees')
+    
+        fetch('http://localhost:3001/madrasas')
             .then((response) => response.json())
             .then((data) => {
-                data.map(k =>
-                    setMadrasaL(
+               const d = data.map(k =>
                         <MadrasaList
                             id={k.id}
                             code={k.code_no}
@@ -45,9 +45,9 @@ function MadrasaLists({ board }) {
                             muhtamim={k.muhtamim}
                             nazim={k.nazim}
                             jela={k.jela}
-                            divis={k.division} />))
+                            divis={k.division} />)
+                        setMadrasaL(d)
             });
-    }, []);
     return (
         <div className="w-full h-full mt-20 mb-40">
             <div>
