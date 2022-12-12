@@ -55,3 +55,4 @@ export const boardList = [
         code: 106
     }
 ];
+console.log(JSON.stringify(boardList));

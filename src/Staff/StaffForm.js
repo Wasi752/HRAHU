@@ -20,7 +20,6 @@ function StaffForm(){
     const [room, setRoom] = useState("");
     const [image, setImage] = useState("");
     const [nationality, setNationality] = useState("");
-    const [religion, setRrligion] = useState("");
     const [brith, setBrith] = useState("");
     const [nid, setNid] = useState("");
 

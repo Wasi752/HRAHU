@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { boardList } from "./Board";
 
 const tbl = "border border-blue-300 p-3 text-left text-xl";
 

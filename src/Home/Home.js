@@ -13,7 +13,7 @@ function HomePage({ itemname, link }) {
 const humanResourceLink = [
     {iname: "Committee",    link: "/committee" },
     {iname: "Boards",       link: "/board" },
-    {iname: "Madrasa",      link: "/madrasa" },
+    {iname: "Madrasa",      link: "/reg/madrasa/madrasalist" },
     {iname: "Negran",       link: "/negran" },
     {iname: "Mumtahin",     link: "/mumtahin" },
     {iname: "Staff",        link: "/summary" },

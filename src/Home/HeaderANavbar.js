@@ -24,7 +24,7 @@ export const menuLink = [
     "/",
     "/committee",
     "/board",
-    "/madrasa",
+    "/reg/madrasa/madrasalist",
     "/work",
     "/student/1",
     "/publication",
