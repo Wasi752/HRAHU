@@ -14,6 +14,7 @@ import FooterAFNavbar from './Home/Footer/Footer';
 import MadrasaRegForm from './Registration/MadrasaRegForm';
 import MadrasaLists from './Registration/MadrasaList';
 import StaffForm from './Staff/StaffForm';
+import BoardList from './Registration/Board';
 
 function App() {
   return (
@@ -25,14 +26,18 @@ function App() {
         <Route path="/summary/staff" element={<StaffForm />} />
         <Route path="/sdetails/:menu" element={<StaffDetails />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/board" element={<BoardList/>} />
         <Route path="/work" element={<WorksEvent />} />
         <Route path="/madrasa" element={<MadrasaResults mname={results[0].mname}/>} />
-        <Route path="/student/:menu" element={<StudentResults/>} />
         <Route path="/result/resultentry" element={<StudentResults/>} />
         <Route path="/result/madrasa/:menu" element={<MadrasaResults mname={results[0].mname}/>} />
         <Route path="/result/student/:menu" element={<StudentResults/>} />
         <Route path="/reg/madrasa" element={<MadrasaRegForm/>} />
         <Route path="/reg/madrasa/madrasalist" element={<MadrasaLists board="Wifaqul Madarisil Arabia Bangladesh"/>} />
+        <Route path="/reg/student" element={<MadrasaRegForm/>} />
+        <Route path="/reg/studentlist" element={<MadrasaRegForm/>} />
+
+
         
       </Routes>
       <FooterAFNavbar/>

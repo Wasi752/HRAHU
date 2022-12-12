@@ -130,11 +130,6 @@ function StaffForm(){
 
                         </div>
                     </div>
-                    
-                    
-                    <div className="ml-12 pr-3 pl-8">
-                        
-                    </div>
                 </div>
                 
                 <div className="w-[10%]" ></div>

@@ -1,58 +1,61 @@
+import { useState } from "react";
 
-export const boardList = [
-    {
-        name_arabic: "وفاق المدارس العربيه بنغلاديش",
-        name_bangala: "বেফাকুল মাদারিসিল আরাবিয়া বাংলাদেশ",
-        name_english: "Wifaqul Madarisil Arabia Bangladesh",
-        address: "Kazla (Vangga Press), Dania, Jatrabari, Dhaka",
-        e_mail: "wifaqbd@gmail.com",
-        phone: "01670474797, 01924722711",
-        code: 101
-    },
-    {
-        name_arabic: "وفاق المدارس العربيه القوميه جوهر دنجه بنغلاديش ",
-        name_bangala: "বেফাকুল মাদারিসিল কওমিয়া গওহরডাঙ্গা বাংলাদেশ",
-        name_english: "Wifaqul Madarisil Qawmia Gawhardanga Bangladesh",
-        address: "Darul Uloom Khadimul Islam Madrasa, Gawhardanga, Tungipara, Gopalgang",
-        e_mail: "gawhardangaboard@gmail.com",
-        phone: "01935545515, 01716886687",
-        code: 102
-    },
-    {
-        name_arabic: "انجمن الاتحاد المدارس بنغلاديش",
-        name_bangala: "আঞ্জুমানে ইত্তেহাদুল মাদারিস বাংলাদেশ",
-        name_english: "Anzuman-e Ittehadul Madaris, Chittagong, Bangladesh",
-        address: "Al Jamia Al Islamia, Potia, Chittagong",
-        e_mail: "jamiapotia@gmail.com",
-        phone: "01671337788, 01819065606",
-        code: 103
-    },
-    {
-        name_arabic: "ازاد ديني اداره تعليم بنغلاديش ",
-        name_bangala: "আযাদ দ্বীনি এদারায়ে তালিম বাংলাদেশ",
-        name_english: "Azad Dini Adara-e Talim sylhat, Bangladesh",
-        address: "Adara Manjil, Subhani Ghat, Sadar, Sylhat",
-        e_mail: "azaddiniadara@gmail.com",
-        phone: "01714704152, 01712601132",
-        code: 104
-    },
-    {
-        name_arabic: "تنظيم المدارس الدينيه بنغلاديش",
-        name_bangala: "তানযীমুল মাদারিসিদ দ্বীনিয়া বাংলাদেশ",
-        name_english: "Tazimul Madarisid Dinia Bangladesh",
-        address: "Al Jamia Al Islamia Jamil Madrasa, Sadar, Bagura",
-        e_mail: "tanzimulmadaris@gmail.com",
-        phone: "01819469667, 01718407278",
-        code: 105
-    },
-    {
-        name_arabic: "وفاق المدارس الدينيه بنغلاديش",
-        name_bangala: "জাতীয় দ্বীনি মাদ্রাসা শিক্ষাবোর্ড বাংলাদেশ",
-        name_english: "Jatia Dini Madrasa Shikkhaboard Bangladesh",
-        address: "House No ## 120 , Road No ## 5, Block## A, Aftabnagar, Badda, Dhaka",
-        e_mail: "bmadarisiddinia@gmail.com",
-        phone: "01712223926, 01841419003",
-        code: 106
-    }
-];
-console.log(JSON.stringify(boardList));
+const divClassLeft = "flex flex-col w-full h-full ml-56 mt-20";
+
+function Boards ({code, narabic, nbangla, nenglish, address, email, phone}){
+    return(
+        <div className="mt-1 flex flex-col w-full h-full">
+            <div className={divClassLeft}>
+                <p className="text-3xl text-red-500 font-bold font-serif text-green-200">{code}</p>
+                <p className="text-3xl mt-3 text-red-500 font-bold font-serif">{narabic}</p>
+                <p className="text-3xl mt-5 text-green-700 font-bold font-serif">{nbangla}</p>
+                <p className="text-3xl mt-5 text-blue-700 font-bold font-serif">{nenglish}</p>
+                <p className="text-2xl mt-3 text-white font-serif">{address}</p>
+                <p className="text-2xl mt-3 text-white font-serif">{email}</p>
+                <p className="text-2xl mt-3 text-white font-serif">{phone}</p>
+            </div>              
+        </div>
+    )
+}
+function BoardList(){
+    const [boards, setBoardList] = useState("");
+    
+        fetch('http://localhost:3001/boards')
+            .then((response) => response.json())
+            .then((data) => {
+               const d = data.map(k =>
+                        <Boards
+                            code={k.code}
+                            narabic={k.name_arabic}
+                            nbangla={k.name_bangala}
+                            nenglish={k.name_english}
+                            address={k.address}
+                            phone={k.phone}
+                            email={k.e_mail}
+                            />)
+                        setBoardList(d)
+            });
+    return(
+        <div className="w-full h-full flex bg-black">
+            <div className="w-[15%] h-full"></div>
+            <div className="w-[15%] h-full flex flex-col">
+                <img src="hrahuImages/one.png" className="w-[30%] h-[30%] mt-72 ml-40"/>
+                <img src="hrahuImages/two.png" className="w-[30%] h-[30%] mt-72 ml-40"/>
+                <img src="hrahuImages/three2.jpeg" className="w-[40%] h-[20%] mt-72 ml-40"/>
+                <img src="hrahuImages/four2.jpeg" className="w-[30%] h-[30%] mt-72 ml-40"/>
+                <img src="hrahuImages/five2.jpeg" className="w-[40%] h-[20%] mt-72 ml-40"/>
+                <img src="hrahuImages/six.jpeg" className="w-[30%] h-[30%] mt-72 ml-40"/>
+            </div>
+                <div className="w-[60%] h-full ">        
+                    <p className="mt-20 mb-10 text-5xl text-red-700 font-bold font-serif text-left ml-40">Boards Under Al-Haiatul Ulya</p>
+                    <div className="flex flex-col w-full h-full justify-center">
+                        {boards}
+                    </div>
+                </div>
+                
+                <div className="w-[10%]" ></div>
+            
+        </div>
+    )
+}
+export default BoardList; 
