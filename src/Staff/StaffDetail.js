@@ -1,11 +1,9 @@
 import StaffSummary from "./StaffList";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import Form from "./Form";
-import data from "./data";
 
 
-function StaffDetail({ i, id, name, father, mother, present_address, permanent_address, academic_achievement, languages_skills, designation, contact_no, e_mail, room_no, user, image }) {
+function StaffDetail({ i, id, name, father, mother, present_address, permanent_address, academic_achievement, languages_skills, designation, contact_no, e_mail, room_no, nationality, brith, nid, image }) {
 
     return (
         <div className="flex flex-row">
@@ -21,11 +19,10 @@ function StaffDetail({ i, id, name, father, mother, present_address, permanent_a
                 <p className="text-lg font-serif">{designation}</p>
                 <p className="font-serif">{contact_no}</p>
                 <p className="font-serif">{e_mail}</p>
-                <p className="font-serif">{room_no}</p>
-                <p className="font-serif">{user?.nationality}</p>
-                <p className="font-serif">{user?.religion}</p>
-                <p className="font-serif">{user?.brith}</p>
-                <p className="font-serif">{user?.nid}</p>
+                <p className="font-serif">Room No:{room_no}</p>
+                <p className="font-serif">{nationality}</p>
+                <p className="font-serif">Date of Brith:{brith}</p>
+                <p className="font-serif">NID:{nid}</p>
             </div>
             <div className="w-[30%] h-[35%] ml-40 mt-10 justify-right ">
                 <img src={"/" + image} className="w-[90%] h-[80%] ml-1" />
@@ -63,6 +60,9 @@ function StaffDetails() {
                         contact_no={y.contact_no}
                         e_mail={y.e_mail}
                         room_no={y.room_no}
+                        nationality={y.nationality}
+                        brith={y.brith}
+                        nid={y.nid}
                         image={y.image}
                         />
                 );

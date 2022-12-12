@@ -4,7 +4,7 @@ import Home from './Home/Home';
 import HeaderANavbar from './Home/HeaderANavbar';
 import StaffSummary from './Staff/StaffList';
 import StaffDetails from './Staff/StaffDetail';
-import Form from './Staff/Form';
+import Form from './Staff/StaffForm';
 import WorksEvent from './WorksEvent';
 import MadrasaResults from './Result/MadrasaResult';
 import StudentResult from './Result/StudentResult';
@@ -13,7 +13,7 @@ import StudentResults from './Result/StudentResult';
 import FooterAFNavbar from './Home/Footer/Footer';
 import MadrasaRegForm from './Registration/MadrasaRegForm';
 import MadrasaLists from './Registration/MadrasaList';
-import StaffForm from './Staff/Form';
+import StaffForm from './Staff/StaffForm';
 
 function App() {
   return (
