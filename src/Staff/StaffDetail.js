@@ -43,7 +43,6 @@ function StaffDetails() {
         fetch('http://localhost:3001/employees')
             .then((response) => response.json())
             .then((data) => {
-                const x = data[0];
                 const y = data.filter((x) => x.id === idNo)[0];
                 setStaff(
                     <StaffDetail

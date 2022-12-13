@@ -1,7 +1,7 @@
 import { results } from "./resultData"
 
 
-function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
+export function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
     const tbl = "border border-blue-300 p-3 text-left text-xl";
     return (
         <div className="flex flex-col justify-center w-full h-[80%] mt-1 bg-gray-100">

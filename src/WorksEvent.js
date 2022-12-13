@@ -17,7 +17,7 @@ function WorksEvent (){
                 <Link to="/effect" className={cName}>Scholarship</Link>
             </div>
             <div className="flex flex-col justify-center ml-10 w-[15%] h-[80%] mt-20 bg-gray-100">
-                <Link to="/" className={cName}>Student Result</Link>
+                <Link to="/result/student/1" className={cName}>Student Result</Link>
                 <Link to="/madrasa" className={cName}>Madrasa's Result</Link>
             </div>
             <div className="flex flex-col justify-center ml-10 w-[15%] h-[80%] mt-20 bg-gray-100">

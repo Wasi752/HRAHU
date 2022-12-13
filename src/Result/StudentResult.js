@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
-function StudentResult({ id, i, mname, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
+export function StudentResult({ id, i, mname, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
     const tbl = "border border-green-300 pt-2 pb-2 pl-1 pr-2 ml-5 text-center text-lg border-spacing-1";
     return (
         <div className="w-[90%] h-[80%] justify-center ml-24 mt-20 bg-gray-100">
