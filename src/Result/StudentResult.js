@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { results } from "./resultData";
 
-function StudentResult({ id, mname, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
+function StudentResult({ id, i, mname, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
     const tbl = "border border-green-300 pt-2 pb-2 pl-1 pr-2 ml-5 text-center text-lg border-spacing-1";
     return (
         <div className="w-[90%] h-[80%] justify-center ml-24 mt-20 bg-gray-100">
@@ -56,16 +55,20 @@ function StudentResult({ id, mname, srl, roll, name, bukhari1, bukhari2, muslim1
 function StudentResults() {
     
     const { menu } = useParams();
-    const idNum = parseInt(menu);
+    const idNo = parseInt(menu);
     const [page, setPage] = useState(1);
     const [sResult, setSResult] = useState();
 
     useEffect(() => {
-    const t = results[0];
-    const y = results.filter((f) => t.id === idNum)[0];
+        fetch('http://localhost:3001/results')
+            .then((response) => response.json())
+            .then((data) => {
+    const t = data[0];
+    const y = data.filter((f) => f.id === idNo)[0];
         setSResult(
             <StudentResult
                 mname={y.mname}
+                i={y.id}
                 id={y.id}    
                 srl={y.id + 10}
                 roll={y.roll + 100}
@@ -82,20 +85,22 @@ function StudentResults() {
                 muwattan={y.muwattan}
                 total={y.bukhari1 + y.bukhari2 + y.muslim1 + y.muslim2 + y.tirmizi1 + y.tirmizi2 + y.abudaud + y.nasayee + y.tahabi + y.muwattan}
                 />);
+        });
         
-    }, [page]);
+}, [page]);
         return(
             <div className="w-full h-full flex mb-56">
                 <div className="w-[5%] h-full mt-20"></div>
                 <div className="flex flex-col ml-1 w-[90%] h-[80%] mt-10 bg-gray-100">
                         <p className="justify-left">{sResult}</p>
                     <div>
-                        <Link to={"/student/" + (idNum - 1)} >
+                        <Link to={"/result/student/" + (idNo - 1)} >
                             <button className='w-[15%] h-full rounded bg-yellow-500 mt-10 mb-10 ml-20 p-1 text-xl'
                                 onClick={() => setPage(page - 1)} >
                                 Back
-                            </button></Link>
-                        <Link to={"/student/" + (idNum + 1)} >
+                            </button>
+                        </Link>
+                        <Link to={"/result/student/" + (idNo + 1)} >
                             <button className='w-[15%] h-full rounded bg-blue-500 mt-20 mb-10 ml-96 p-1 text-xl justify-end'
                                 onClick={() => setPage(page + 1)} >
                                 Next

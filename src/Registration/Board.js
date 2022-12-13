@@ -39,16 +39,16 @@ function BoardList(){
         <div className="w-full h-full flex bg-black">
             <div className="w-[15%] h-full"></div>
             <div className="w-[15%] h-full flex flex-col">
-                <img src="hrahuImages/one.png" className="w-[30%] h-[30%] mt-72 ml-40"/>
+                <img src="hrahuImages/one.png" className="w-[30%] h-[30%] mt-96 ml-40"/>
                 <img src="hrahuImages/two.png" className="w-[30%] h-[30%] mt-72 ml-40"/>
-                <img src="hrahuImages/three2.jpeg" className="w-[40%] h-[20%] mt-72 ml-40"/>
+                <img src="hrahuImages/three2.jpeg" className="w-[30%] h-[20%] mt-96 ml-40"/>
                 <img src="hrahuImages/four2.jpeg" className="w-[30%] h-[30%] mt-72 ml-40"/>
-                <img src="hrahuImages/five2.jpeg" className="w-[40%] h-[20%] mt-72 ml-40"/>
-                <img src="hrahuImages/six.jpeg" className="w-[30%] h-[30%] mt-72 ml-40"/>
+                <img src="hrahuImages/five2.jpeg" className="w-[30%] h-[20%] mt-72 ml-40"/>
+                <img src="hrahuImages/six.jpeg" className="w-[30%] h-[20%] mt-72 ml-40"/>
             </div>
                 <div className="w-[60%] h-full ">        
                     <p className="mt-20 mb-10 text-5xl text-red-700 font-bold font-serif text-left ml-40">Boards Under Al-Haiatul Ulya</p>
-                    <div className="flex flex-col w-full h-full justify-center">
+                    <div className="flex flex-col w-full h-full justify-center mb-20">
                         {boards}
                     </div>
                 </div>
