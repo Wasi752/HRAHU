@@ -55,7 +55,7 @@ export function StudentResult({ id, i, mname, srl, roll, name, bukhari1, bukhari
 function StudentResults() {
     
     const { menu } = useParams();
-    const idNo = parseInt(menu);
+    const rollNo = parseInt(menu);
     const [page, setPage] = useState(1);
     const [sResult, setSResult] = useState();
 
@@ -63,15 +63,14 @@ function StudentResults() {
         fetch('http://localhost:3001/results')
             .then((response) => response.json())
             .then((data) => {
-    const t = data[0];
-    const y = data.filter((f) => f.id === idNo)[0];
+    const y = data.filter((f) => f.roll === rollNo)[0];
         setSResult(
             <StudentResult
                 mname={y.mname}
                 i={y.id}
                 id={y.id}    
-                srl={y.id + 10}
-                roll={y.roll + 100}
+                srl={y.id}
+                roll={y.roll}
                 name={y.name}
                 bukhari1={y.bukhari1}
                 bukhari2={y.bukhari2}
@@ -94,13 +93,13 @@ function StudentResults() {
                 <div className="flex flex-col ml-1 w-[90%] h-[80%] mt-10 bg-gray-100">
                         <p className="justify-left">{sResult}</p>
                     <div>
-                        <Link to={"/result/student/" + (idNo - 1)} >
+                        <Link to={"/result/student/" + (rollNo - 1)} >
                             <button className='w-[15%] h-full rounded bg-yellow-500 mt-10 mb-10 ml-20 p-1 text-xl'
                                 onClick={() => setPage(page - 1)} >
                                 Back
                             </button>
                         </Link>
-                        <Link to={"/result/student/" + (idNo + 1)} >
+                        <Link to={"/result/student/" + (rollNo + 1)} >
                             <button className='w-[15%] h-full rounded bg-blue-500 mt-20 mb-10 ml-96 p-1 text-xl justify-end'
                                 onClick={() => setPage(page + 1)} >
                                 Next

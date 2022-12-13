@@ -53,6 +53,7 @@ function MadrasaResults({mname}) {
     const madrasa1 = results.filter(k => k.mname === "Darul Uloom Al-Islamia Dhaka")
         .map(y =>
             <MadrasaResult
+                id={y.id}
                 srl={y.id + 10}
                 roll={y.roll + 100}
                 name={y.name}

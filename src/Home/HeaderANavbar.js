@@ -34,7 +34,7 @@ export const menuLink = [
     "/recruit",
     "/notice"
 ];
-export const navbar = menuName.map((x, i) => <Menu name={menuName[i]} link= {menuLink[i]}/>);
+export const navbar = menuName.map((x, i) => <Menu key={i} name={menuName[i]} link= {menuLink[i]}/>);
 
 function HeaderANavbar() {
     return(
