@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import {results} from './Result/resultData';
-import StudentResults from "./Result/StudentResult";
+
 
 function WorksEvent (){
     const cName = "border border-blue-300 w-[90%] p-3 ml-3 mb-2 text-xl text-center font-bold font-serif hover:text-blue-600";

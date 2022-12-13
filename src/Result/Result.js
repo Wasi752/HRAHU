@@ -2,21 +2,21 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 
-function InputForRollNo() {
+const inputForRollNo =()=> {
     return (
         <div>
             <p className="text-2xl text-center mt-20 font-bold font-serif text-red-800">Enter Your Roll NO</p>
             <div className="mt-1 flex">
                 <input
-                    type="number"
+                    type="text"
                     placeholder="Roll No"
-                    value={""}
-                    
+                    value=""
+                    onChange={""}
                     className="h-[7%] w-[95%] p-5 border border-blue-300 rounded-md ml-3 mt-5 mr-3"
                 />
             </div>
             <div className="">
-                <Link to={"/result/student/101"} ><button
+                <Link to={`/result/student/101`} ><button
                     type="button"
                     onClick={""}
                     className="text-center text-xl text-white font-bold h-[7%] w-[94%] mt-5 bg-blue-600 hover:text-blue-300 p-4 border rounded-md ml-3 mr-3"
@@ -30,9 +30,9 @@ const a = InputForRollNo();
 
 function InputForMadrasaCodeNo() {
     return (
-        <div>
+        <div className="w-full h-[80%]">
             <p className="text-2xl text-center mt-20 font-bold font-serif text-red-800">Enter Your Madrasa Code NO</p>
-            <div className="mt-1 flex">
+            <div className="mt-1 flex w-full h-full">
                 <input
                     type="text"
                     placeholder="Code No"
@@ -41,7 +41,7 @@ function InputForMadrasaCodeNo() {
                     className="h-[7%] w-[95%] p-5 border border-blue-300 rounded-md ml-3 mt-5 mr-3"
                 />
             </div>
-            <div className="">
+            <div className="w-full h-full">
                 <Link to={"/result/madrasa/1"}>
                     <button
                         type="button"

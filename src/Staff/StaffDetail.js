@@ -1,4 +1,3 @@
-import StaffSummary from "./StaffList";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
@@ -25,7 +24,7 @@ function StaffDetail({ i, id, name, father, mother, present_address, permanent_a
                 <p className="font-serif">NID:{nid}</p>
             </div>
             <div className="w-[30%] h-[35%] ml-40 mt-10 justify-right ">
-                <img src={"/" + image} className="w-[90%] h-[80%] ml-1" />
+                <img src={"/" + image} alt= "Staff of Al-Haitul Ulya" className="w-[90%] h-[80%] ml-1" />
 
             </div>
         </div>
@@ -66,7 +65,7 @@ function StaffDetails() {
                         />
                 );
             });
-    }, [pageNo]);
+    }, [pageNo, idNo]);
 
     return (
         <div className="w-full h-full flex">
