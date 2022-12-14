@@ -87,8 +87,9 @@ function MadrasaResults() {
             fetch('http://localhost:3001/results')
             .then((response) => response.json())
             .then((data) => {
-                const n = data.map(x => x.mname)
-                setMadrasaName(n);
+                const n = data.filter((f) => f.mcode === codeNo)
+                .map(x => x.mname)
+                setMadrasaName(n[0]);
             })
 
 }, [page, codeNo]);
