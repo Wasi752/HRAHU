@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-
 function InputForRollNo() {
     const [roll, setRoll] = useState();
-    return (
+  return (
         <div>
             <p className="text-2xl text-center mt-20 font-bold font-serif text-red-800">Enter Your Roll NO</p>
             <div className="mt-1 flex">
                 <input
-                    type="number"
+                    type="text"
                     placeholder="Roll No"
                     value={roll}
                     onChange={e => setRoll(e.target.value)}
@@ -30,9 +29,9 @@ function InputForRollNo() {
 function InputForMadrasaCodeNo() {
     const [mresult, setMResult] = useState();
     return (
-        <div>
+        <div className="w-full h-[80%]">
             <p className="text-2xl text-center mt-20 font-bold font-serif text-red-800">Enter Your Madrasa Code NO</p>
-            <div className="mt-1 flex">
+            <div className="mt-1 flex w-full h-full">
                 <input
                     type="text"
                     placeholder="Code No"

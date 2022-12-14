@@ -86,7 +86,7 @@ function StudentResults() {
                 />);
         });
         
-}, [page]);
+}, [page, rollNo]);
         return(
             <div className="w-full h-full flex mb-56">
                 <div className="w-[5%] h-full mt-20"></div>

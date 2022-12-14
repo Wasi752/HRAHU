@@ -34,12 +34,12 @@ export const menuLink = [
     "/recruit",
     "/notice"
 ];
-export const navbar = menuName.map((x, i) => <Menu key={i} name={menuName[i]} link= {menuLink[i]}/>);
+export const navbar = menuName.map((x, i) => <Menu name={menuName[i]} link= {menuLink[i]}/>);
 
 function HeaderANavbar() {
     return(
         <div className="w-full h-full">
-            <img src="/hrahuImages/homebennar.jpg" className="w-full h-[20%]" />
+            <img src="/hrahuImages/homebennar.jpg" all="Darsgah" className="w-full h-[20%]" />
             <div className="flex flex-row w-full mt-5 ml-5 justify-center bg-white">
                 {navbar}
             </div>
