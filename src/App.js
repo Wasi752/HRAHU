@@ -30,7 +30,7 @@ function App() {
         <Route path="/work" element={<WorksEvent />} />
         <Route path="/result" element={<Result/>} />
         <Route path="/result/student/:menu" element={<StudentResults />} />
-        <Route path="/result/madrasa/:menu" element={<MadrasaResults mname={results[0].mname} />} />
+        <Route path="/result/madrasa/:menu" element={<MadrasaResults/>}/>
         <Route path="/reg/madrasa" element={<MadrasaRegForm />} />
         <Route path="/reg/madrasa/madrasalist" element={<MadrasaLists board="Wifaqul Madarisil Arabia Bangladesh" />} />
         <Route path="/reg/student" element={<MadrasaRegForm />} />
