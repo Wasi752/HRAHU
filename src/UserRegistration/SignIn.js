@@ -54,15 +54,15 @@ function Signin() {
                             placeholder="Password"
                             className='m-3 px-4 py-3 rounded-lg bg-gray-700 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'
                         />
-                        <button
+                        <Link to="/home"
                             type="button"
                             onClick={signin}
-                            className='m-3 px-4 py-3 bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg text-2xl  hover:bg-teal-400'
+                            className='m-3 px-4 py-3 bg-teal-500 shadow-lg text-center shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg text-2xl  hover:bg-teal-400'
                         >SIGNIN
-                        </button>
+                        </Link>
                     </form>
                     <p className="mt-2 text-teal-300">New User?</p>
-                    <Link to="/"><p className="text-teal-300 underline">Signup</p></Link>
+                    <Link to="/"><p className="text-teal-300 underline">SignUp</p></Link>
                 </div>
             </div>
             <div className="w-4/12 h-full"></div>

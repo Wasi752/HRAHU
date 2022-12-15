@@ -59,7 +59,7 @@ function Signup() {
                         </button>
                     </form>
                     <p className="mt-2 text-teal-300">Already Registered?</p>
-                    <Link to="/signin"><p className="text-teal-300 underline">Signin</p></Link>
+                    <Link to="/signin"><p className="text-teal-300 underline">SignIn</p></Link>
                 </div>
             </div>
             <div className="w-4/12 h-full">

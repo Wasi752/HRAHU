@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import HeaderANavbar from "./HeaderANavbar";
+import FooterAFNavbar from "./Footer/Footer";
 
 const cls = "w-[20%] h-[80%] flex flex-col justify-center ml-16  mt-20 bg-gray-100";
 const clas = "text-3xl text-center mb-5 font-bold font-serif text-blue-700";
@@ -65,35 +67,41 @@ const certificatesLink = certificateLink.map(x => <HomePage link={x.link} itemna
 function Home() {
     const cName = "border border-blue-300 w-[80%] p-3 ml-10 mb-2 text-xl text-center justify-center font-bold font-serif hover:text-blue-600";
     return (
-        <div className="w-full h-screen flex">
-            <div className={cls}>
-                <div className="w-full h-[25%]">
-                    <img src="/hrahuImages/humanr2.jpeg" className="w-full h-full" />
+        <div>
+            <HeaderANavbar/>
+            <div className="w-full h-screen flex">
+                
+                <div className={cls}>
+                    <div className="w-full h-[25%]">
+                        <img src="/hrahuImages/humanr2.jpeg" className="w-full h-full" />
+                    </div>
+                    <p className={clas}>Human Resource</p>
+                    {humanResourcesLink}
                 </div>
-                <p className={clas}>Human Resource</p>
-                {humanResourcesLink}
-            </div>
-            <div className={cls}>
-                <div className="w-full h-[25%]">
-                    <img src="/hrahuImages/work1.jpeg" className="w-full h-full" />
+                <div className={cls}>
+                    <div className="w-full h-[25%]">
+                        <img src="/hrahuImages/work1.jpeg" className="w-full h-full" />
+                    </div>
+                    <p className={clss}>Works</p>
+                    {worksLink}
                 </div>
-                <p className={clss}>Works</p>
-                {worksLink}
-            </div>
-            <div className={cls}>
-                <div className="w-full h-[25%]">
-                    <img src="/hrahuImages/result1.jpeg" className="w-full h-full" />
+                <div className={cls}>
+                    <div className="w-full h-[25%]">
+                        <img src="/hrahuImages/result1.jpeg" className="w-full h-full" />
+                    </div>
+                    <p className={clas}>Exams & Results</p>
+                    {examsLink}
                 </div>
-                <p className={clas}>Exams & Results</p>
-                {examsLink}
-            </div>
-            <div className={cls}>
-                <div className="w-full h-[25%]">
-                    <img src="/hrahuImages/certificate1.jpeg" className="w-full h-full" />
+                <div className={cls}>
+                    <div className="w-full h-[25%]">
+                        <img src="/hrahuImages/certificate1.jpeg" className="w-full h-full" />
+                    </div>
+                    <p className={clss}>Certificates</p>
+                    {certificatesLink}
                 </div>
-                <p className={clss}>Certificates</p>
-                {certificatesLink}
+                
             </div>
+            <FooterAFNavbar/>
         </div>
     )
 };
