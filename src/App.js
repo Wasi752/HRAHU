@@ -15,13 +15,17 @@ import StaffForm from './Staff/StaffForm';
 import BoardList from './Registration/Board';
 import Result from './Result/Result';
 import { results } from './Result/resultData';
+import Signin from './UserRegistration/SignIn';
+import Signup from './UserRegistration/SignUp';
 
 function App() {
   return (
     <div className="w-full h-full">
-      <HeaderANavbar />
+      
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/summary" element={<StaffSummary />} />
         <Route path="/summary/staff" element={<StaffForm />} />
         <Route path="/sdetails/:menu" element={<StaffDetails />} />
@@ -35,12 +39,8 @@ function App() {
         <Route path="/reg/madrasa/madrasalist" element={<MadrasaLists board="Wifaqul Madarisil Arabia Bangladesh" />} />
         <Route path="/reg/student" element={<MadrasaRegForm />} />
         <Route path="/reg/studentlist" element={<MadrasaRegForm />} />
-        
-
-
-
       </Routes>
-      <FooterAFNavbar />
+     
     </div>
   );
 }
