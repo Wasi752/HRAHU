@@ -20,7 +20,9 @@ function Signup() {
             },
             body: JSON.stringify(user),
         })
-            .then((response) => window.alert("Your information is saved"));
+            .then((response) =>{
+                window.alert("Your information is saved")
+            });
     };
 
     return (

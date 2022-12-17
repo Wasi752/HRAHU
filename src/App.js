@@ -4,7 +4,6 @@ import Home from './Home/Home';
 import HeaderANavbar from './Home/HeaderANavbar';
 import StaffSummary from './Staff/StaffList';
 import StaffDetails from './Staff/StaffDetail';
-import Form from './Staff/StaffForm';
 import WorksEvent from './WorksEvent';
 import MadrasaResults from './Result/MadrasaResult';
 import StudentResults from './Result/StudentResult';
@@ -17,6 +16,7 @@ import Result from './Result/Result';
 import { results } from './Result/resultData';
 import Signin from './UserRegistration/SignIn';
 import Signup from './UserRegistration/SignUp';
+import Form from './Form';
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
         <Route path="/reg/madrasa/madrasalist" element={<MadrasaLists board="Wifaqul Madarisil Arabia Bangladesh" />} />
         <Route path="/reg/student" element={<MadrasaRegForm />} />
         <Route path="/reg/studentlist" element={<MadrasaRegForm />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
      
     </div>
