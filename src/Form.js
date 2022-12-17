@@ -26,7 +26,7 @@ function Form() {
                 image: imageString,
             }
             console.log(user);
-            fetch('http://localhost:3001/imageUpload', {
+            fetch('http://localhost:3001/studentRegistration', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
