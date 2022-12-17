@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Home from "../Home/Home";
 
 function Signin() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const signin = () => {
         const user = {
@@ -25,7 +27,8 @@ function Signin() {
             })
             .then((body) => {
                 if (body) {
-                    window.alert(`Signed in as ${body.username}`)
+                 navigate("/home")
+                    //window.alert(`Signed in as ${body.username}`)
                 }
                 else {
                     window.alert(`No user exists with user name: ${username}`)
