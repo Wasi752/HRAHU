@@ -66,8 +66,8 @@ function MadrasaResults() {
                 .map(y =>
                     <MadrasaResult
                         id={y.id}
-                        srl={y.id + 10}
-                        roll={y.roll + 100}
+                        srl={y.id}
+                        roll={y.roll}
                         name={y.name}
                         bukhari1={y.bukhari1}
                         bukhari2={y.bukhari2}
