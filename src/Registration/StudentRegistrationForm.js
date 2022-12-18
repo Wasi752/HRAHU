@@ -33,6 +33,10 @@ function StudentRegistrationForm() {
     const [nid, setNid] = useState("");
 
     const submit = () => {
+        if(name.length < 4){
+            window.alert('Name must be contain atleast 3 Characters');
+            return;
+        }
         getB64(image, (imageString) => {
             const user = {
                 name: name,

@@ -17,12 +17,22 @@ const getB64 = (file, cb) => {
 }
 function Form() {
     const [name, setName] = useState("");
+    const [password, setPassword] = useState("");
     const [image, setImage] = useState("");
 
     const submit = () => {
+        if(name.length < 5){
+            window.alert(`Name must be contain atleast 5 Characters`);
+            return;
+        }
+        if(password.length < 8){
+            window.alert(`Password must be contain atleast 8 numbers & Characters`);
+            return;
+        }
         getB64(image, (imageString) => {
             const user = {
                 name: name,
+                password : password,
                 image: imageString,
             }
             console.log(user);
@@ -51,7 +61,11 @@ function Form() {
                             <input type="text" value={name} onChange={e => setName(e.target.value)} className={inputClass} />
                         </div>
                         <div className={divClassLeft}>
-                            <label className={lableClass}>02. Image :</label>
+                            <label className={lableClass}>02. Password :</label>
+                            <input type="password" value={password} onChange={e => setPassword(e.target.value)} className={inputClass} />
+                        </div>
+                        <div className={divClassLeft}>
+                            <label className={lableClass}>03. Image :</label>
                             <input type="file"
                                 onChange={e => setImage(e.target.files[0])}
                                 className={inputClass} />
