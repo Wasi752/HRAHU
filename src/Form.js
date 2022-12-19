@@ -21,32 +21,31 @@ function Form() {
     const [image, setImage] = useState("");
 
     const submit = () => {
-        if(name.length < 5){
+        if (name.length < 5) {
             window.alert(`Name must be contain atleast 5 Characters`);
             return;
         }
-        if(password.length < 8){
+        if (password.length < 8) {
             window.alert(`Password must be contain atleast 8 numbers & Characters`);
             return;
         }
         getB64(image, (imageString) => {
             const user = {
                 name: name,
-                password : password,
+                password: password,
                 image: imageString,
             }
-            console.log(user);
+
             fetch('http://localhost:3001/studentRegistration', {
-            method: 'POST', // or 'PUT'
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(user),
-        })
-            .then((response) => window.alert("image is Uploaded"));
-        }
-        );
-        
+                method: 'POST', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(user),
+            })
+                .then((response) => window.alert("image is Uploaded"));
+        });
+
     };
     return (
         <div className="w-full h-full flex mt-20 mb-56">

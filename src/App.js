@@ -18,6 +18,7 @@ import Signin from './UserRegistration/SignIn';
 import Signup from './UserRegistration/SignUp';
 import Form from './Form';
 import StudentRegistrationForm from './Registration/StudentRegistrationForm';
+import Registration from './Registration/Registration';
 
 function App() {
   return (
@@ -36,9 +37,10 @@ function App() {
         <Route path="/result" element={<Result/>} />
         <Route path="/result/student/:menu" element={<StudentResults />} />
         <Route path="/result/madrasa/:menu" element={<MadrasaResults/>}/>
+        <Route path="/reg" element={<Registration />} />
         <Route path="/reg/madrasa" element={<MadrasaRegForm />} />
         <Route path="/reg/madrasa/madrasalist" element={<MadrasaLists board="Wifaqul Madarisil Arabia Bangladesh" />} />
-        <Route path="/reg/studentreg" element={<StudentRegistrationForm/>} />
+        <Route path="/reg/student" element={<StudentRegistrationForm/>} />
         <Route path="/reg/studentlist" element={<MadrasaRegForm />} />
         <Route path="/form" element={<Form />} />
       </Routes>
