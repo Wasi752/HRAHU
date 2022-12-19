@@ -15,16 +15,17 @@ function InputForFazilatInfo() {
                     onChange={e => setRoll(e.target.value)}
                     className="h-[7%] w-[95%] p-5 border border-blue-300 rounded-md ml-3 mt-5 mr-3"
                 />
+                
                 <input
                     type="text"
                     placeholder="Year"
                     value={year}
                     onChange={e => setYear(e.target.value)}
                     className="h-[7%] w-[95%] p-5 border border-blue-300 rounded-md ml-3 mt-5 mr-3"
-                />
+                /> 
             </div>
             <div className="">
-                <Link to={`/reg/student/${roll}`} ><button
+                <Link to={`/reg/fazilat/${roll}`} ><button
                     type="button"
                     className="text-center text-xl text-white font-bold h-[7%] w-[94%] mt-5 bg-blue-600 hover:text-blue-300 p-4 border rounded-md ml-3 mr-3"
                 >Submit
@@ -39,7 +40,7 @@ function Registration() {
     const [showMadrasa, setShowMadrasa] = useState(false);
     return (
         <div className="w-full h-screen flex">
-            <div className="w-[20%] h-[80%] bg-blue-500 mt-20 ml-56">
+            <div className="w-[20%] h-[80%] bg-green-500 mt-20 ml-56">
                 <Link to= "/reg/madrasa"><button
                     type="button"
                     onClick={""}

@@ -19,6 +19,7 @@ import Signup from './UserRegistration/SignUp';
 import Form from './Form';
 import StudentRegistrationForm from './Registration/StudentRegistrationForm';
 import Registration from './Registration/Registration';
+import FazilatResults from './Registration/FazilatResult';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/reg/student" element={<StudentRegistrationForm/>} />
         <Route path="/reg/studentlist" element={<MadrasaRegForm />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/reg/fazilat/:menu" element={<FazilatResults/>} />
       </Routes>
      
     </div>
