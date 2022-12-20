@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 function FazilatResult({ id, i, mname, sroll, reg, name, fname, mcode, dateBirth, total, divi }) {
-    const tbl = "ml-40 mt-3 text-center text-lg";
-    const nameClass = "text-3xl text-green-900 font-bold ml-40 mt-40";
+    const tbl = "ml-20 mt-3 text-left text-xl mb-3";
+    const nameClass = "text-3xl text-green-900 font-bold ml-20 mt-20";
     return (
         <div className="w-[90%] h-[80%] justify-center ml-24 mt-20 bg-gray-100">
             <p className="text-4xl text-center pt-10 font-bold font-serif text-blue-900">Fazilat Exam Information</p>
             <p className="text-3xl text-center font-bold font-serif text-green-900">for Registration of Dawra-e Hadis Examination-1443/2022</p>
             <p className="text-2xl text-center mt-1 font-bold mb-5 font-serif">Al-Haiatul Ulya Lil-Jamiatil Qawmia Bangladesh</p>
             
-            <div className="flex flex-col justify-center w-full h-[80%] mt-10 bg-gray-100">
-                <ol className="w-full h-[80%] border ml-5 text-left text-lg">
+            <div className="flex flex-col justify-center w-[80%] h-[80%] mt-10 bg-gray-100 ml-36">
+                <ol className="w-full h-[80%] border border-green-800">
                     <li className={nameClass}>Name : {name}</li>
                     <li className={tbl}>Father Name : {fname}</li>
                     <li className={tbl}>Madrasa Code : {mcode}</li>
@@ -33,6 +33,7 @@ function FazilatResults() {
     const rollNo = parseInt(menu);
     const [page, setPage] = useState(1);
     const [fazilatInformation, setFazilatInformation] = useState();
+    const [show, setShow] = useState(false);
 
     useEffect(() => {
         fetch('http://localhost:3001/fazilatResult')

@@ -40,18 +40,18 @@ function Registration() {
     
     return (
         <div className="w-full h-screen flex">
-            <div className="w-[20%] h-[80%] bg-green-500 mt-20 ml-56">
+            <div className="w-[20%] h-[80%] bg-gray-800 mt-20 ml-56">
                 <Link to= "/reg/madrasa"><button
                     type="button"
                     onClick={""}
-                    className="text-2xl font-serif font-extrabold ml-20 mb-5 mt-40 text-white">
+                    className="text-2xl font-serif font-extrabold ml-12 mb-5 mt-40 text-white border p-3">
                         Madrasa Registration
                     </button>
                 </Link>
                 <button
                     type="button"
                     onClick={() => setShowRoll(<InputForFazilatInfo/>)}
-                    className="text-2xl font-serif font-extrabold ml-20 mb-5 mt-5 text-white">
+                    className="text-2xl font-serif font-extrabold ml-12 mb-5 mt-5 text-white border pr-6 pl-3 pb-3 pt-3">
                     Student Registration
                 </button>
 
