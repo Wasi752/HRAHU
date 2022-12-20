@@ -25,7 +25,7 @@ function InputForFazilatInfo() {
                 /> 
             </div>
             <div className="">
-                <Link to={`/reg/fazilat/${roll}`} ><button
+                <Link to={`/reg/student/${roll}`} ><button
                     type="button"
                     className="text-center text-xl text-white font-bold h-[7%] w-[94%] mt-5 bg-blue-600 hover:text-blue-300 p-4 border rounded-md ml-3 mr-3"
                 >Submit

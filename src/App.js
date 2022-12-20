@@ -41,10 +41,9 @@ function App() {
         <Route path="/reg" element={<Registration />} />
         <Route path="/reg/madrasa" element={<MadrasaRegForm />} />
         <Route path="/reg/madrasa/madrasalist" element={<MadrasaLists board="Wifaqul Madarisil Arabia Bangladesh" />} />
-        <Route path="/reg/student" element={<StudentRegistrationForm/>} />
+        <Route path="/reg/student/:menu" element={<FazilatResults/>} />
         <Route path="/reg/studentlist" element={<MadrasaRegForm />} />
         <Route path="/form" element={<Form />} />
-        <Route path="/reg/fazilat/:menu" element={<FazilatResults/>} />
       </Routes>
      
     </div>

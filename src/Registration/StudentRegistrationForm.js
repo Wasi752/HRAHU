@@ -71,8 +71,8 @@ function StudentRegistrationForm() {
             <div className="w-[10%] h-full"></div>
 
             <div className="w-[80%] h-full bg-gray-100 ">
-                <p className="mt-5 mb-10 text-3xl text-red-700 font-bold font-serif text-left text-center">Enter Student Information</p>
-                <div className="flex w-full h-full justify-center divide-x-2 divide-slate-500">
+                <p className="mt-1 mb-10 text-4xl text-red-700 font-bold font-serif text-left text-center">Enter Student Information</p>
+                <div className="flex w-full h-full divide-x-2 divide-slate-500">
                     <div className="mt-1 flex flex-col w-full h-full ">
                         <div className={divClassLeft}>
                             <label className={lableClass}>01. Name :</label>
