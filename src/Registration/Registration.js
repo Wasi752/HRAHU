@@ -37,7 +37,7 @@ function InputForFazilatInfo() {
 
 function Registration() {
     const [showRoll, setShowRoll] = useState(false);
-    const [showMadrasa, setShowMadrasa] = useState(false);
+    
     return (
         <div className="w-full h-screen flex">
             <div className="w-[20%] h-[80%] bg-green-500 mt-20 ml-56">
@@ -59,7 +59,7 @@ function Registration() {
             </div>
             <div className="w-[60%] h-[80%]  ml-10 mt-20 bg-gray-100">
                 <div className="w-[50%] ml-56 mt-40">{showRoll}</div>
-                <div className="w-[50%] ml-56 mt-40">{showMadrasa}</div>
+                
             </div>
             <div className="w-[20%] h-[80%] mt-20"></div>
 

@@ -18,9 +18,9 @@ function FazilatResult({ id, i, mname, sroll, reg, name, fname, mcode, dateBirth
                     <li className={tbl}>Madrasa Name : {mname}</li>
                     <li className={tbl}>Registration No : {reg}</li>
                     <li className={tbl}>Roll No : {sroll}</li>
-                    <li className={tbl}>Madrasa Code : 1443/2022</li>
-                    <li className={tbl}>Achieved Total Number : {total}</li>
-                    <li className={tbl}>Achieved Division : {divi}</li>
+                    <li className={tbl}>Exam Year : 1443/2022</li>
+                    <li className={tbl}>Total Number : {total}</li>
+                    <li className={tbl}>Division : {divi}</li>
                     <li className={tbl}>Date of Brith : {dateBirth}</li>
                 </ol>
             </div>
@@ -50,6 +50,7 @@ function FazilatResults() {
                 mname={y.madrasa}
                 reg={y.regNo}
                 sroll={y.roll}
+                dateBirth={y.dateOfBirth}
                 total={y.total}
                 divi={y.division}
                 />);
