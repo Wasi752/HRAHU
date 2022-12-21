@@ -3,7 +3,7 @@ import { useState } from "react";
 const inputClass = "h-[10%] w-[65%] p-4 border border-blue-300 rounded-md m-1";
 const lableClass = "ml-0 pr-2 mt-5 text-xl font-bold";
 const divClassRight = "flex flex-col w-full h-full ml-40";
-const divClassLeft = "flex flex-col w-full h-full ml-56";
+const divClassLeft = "flex flex-col w-full h-full ml-44";
 
 const getB64 = (file, cb) => {
     const reader = new FileReader();
@@ -53,7 +53,6 @@ function StudentRegistrationForm() {
                 brith: brith,
                 nid: nid,
             }
-            console.log(user);
             fetch('http://localhost:3001/studentRegistration', {
                 method: 'POST', // or 'PUT'
                 headers: {
@@ -67,11 +66,11 @@ function StudentRegistrationForm() {
 
     };
     return (
-        <div className="w-full h-full flex mt-20 mb-56">
+        <div className="w-full h-full flex mt-10 mb-56">
             <div className="w-[10%] h-full"></div>
 
             <div className="w-[80%] h-full bg-gray-100 ">
-                <p className="mt-1 mb-10 text-4xl text-red-700 font-bold font-serif text-left text-center">Enter Student Information</p>
+                <p className="mt-1 mb-10 text-4xl text-red-700 font-bold font-serif text-center">Enter Student Information</p>
                 <div className="flex w-full h-full divide-x-2 divide-slate-500">
                     <div className="mt-1 flex flex-col w-full h-full ">
                         <div className={divClassLeft}>
@@ -96,7 +95,7 @@ function StudentRegistrationForm() {
                         </div>
                         <div className={divClassLeft}>
                             <label className={lableClass}>11. Date of Birth :</label>
-                            <input type="text" value={brith} onChange={e => setBrith(e.target.value)} className={inputClass} />
+                            <input type="date" value={brith} onChange={e => setBrith(e.target.value)} className={inputClass} />
                         </div>
                         <div className={divClassLeft}>
                             <label className={lableClass}>15. NID No :</label>
@@ -140,7 +139,7 @@ function StudentRegistrationForm() {
                     <button
                         type="button"
                         onClick={submit}
-                        className="text-center text-2xl text-white font-bold h-[10%] w-[81%] p-4 border border-blue-300 rounded-md ml-16 mb-10 mr-3 mt-10 bg-blue-600 hover:text-blue-300">Submit</button>
+                        className="text-center text-2xl text-white font-bold h-[10%] w-[84%] p-4 border border-blue-300 rounded-md ml-5 mb-10 mr-3 mt-10 bg-blue-600 hover:text-blue-300">Submit</button>
                 </div>
             </div>
             <div className="w-[10%]" ></div>
