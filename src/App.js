@@ -20,6 +20,7 @@ import Form from './Form';
 import StudentRegistrationForm from './Registration/StudentRegistrationForm';
 import Registration from './Registration/Registration';
 import FazilatResults from './Registration/FazilatResult';
+import PasswordAndConfirmPasswordValidation from './UserRegistration/PasswordAndConfirmPasswordValidation';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/reg/student/:menu" element={<FazilatResults/>} />
         <Route path="/reg/studentlist" element={<MadrasaRegForm />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/passvalidation" element={<PasswordAndConfirmPasswordValidation />} />
       </Routes>
      
     </div>

@@ -5,12 +5,26 @@ function Signup() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     const signup = () => {
+        if (username.length < 5) {
+            window.alert(`Name must be contain atleast 5 Characters`);
+            return;
+        }
+        if (password.length < 8) {
+            window.alert(`at least one uppercase character
+            at least one lowercase character
+            at least one digit/number
+            at least one special character
+            minimum 8 characters`);
+            return;
+        }
         const user = {
             username: username,
             email: email,
-            password: password
+            password: password,
+            confirmPassword: confirmPassword
         };
 
         fetch('http://localhost:3001/signup', {
@@ -49,6 +63,13 @@ function Signup() {
                         <input
                             value={password}
                             onChange={e => setPassword(e.target.value)}
+                            type="password"
+                            placeholder="Password"
+                            className='m-3 px-4 py-3 rounded-lg bg-gray-700 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'
+                        />
+                        <input
+                            value={confirmPassword}
+                            onChange={e => setConfirmPassword(e.target.value)}
                             type="password"
                             placeholder="Password"
                             className='m-3 px-4 py-3 rounded-lg bg-gray-700 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'
