@@ -1,32 +1,49 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PasswordAndConfirmPasswordValidation from "./PasswordAndConfirmPasswordValidation";
 
 function Signup() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
 
     const signup = () => {
         if (username.length < 5) {
             window.alert(`Name must be contain atleast 5 Characters`);
             return;
         }
-        if (password.length < 8) {
-            window.alert(`at least one uppercase character
-            at least one lowercase character
-            at least one digit/number
-            at least one special character
-            minimum 8 characters`);
-            return;
+
+        const uppercaseRegExp = /(?=.*?[A-Z])/;
+        const lowercaseRegExp = /(?=.*?[a-z])/;
+        const digitsRegExp = /(?=.*?[0-9])/;
+        const specialCharRegExp = /(?=.*?[#?!@$%^&*-])/;
+        const minLengthRegExp = /.{8,}/;
+        const uppercasePassword = uppercaseRegExp.test(password);
+        const lowercasePassword = lowercaseRegExp.test(password);
+        const digitsPassword = digitsRegExp.test(password);
+        const specialCharPassword = specialCharRegExp.test(password);
+        const minLengthPassword = minLengthRegExp.test(password);
+
+        if (password.length === 0) {
+            window.alert("Password is empty");
+        } else if (!uppercasePassword) {
+            window.alert("At least one Uppercase");
+        } else if (!lowercasePassword) {
+            window.alert("At least one Lowercase");
+        } else if (!digitsPassword) {
+            window.alert("At least one digit");
+        } else if (!specialCharPassword) {
+            window.alert("At least one Special Characters");
+        } else if (!minLengthPassword) {
+            window.alert("At least minumum 8 characters");
+        } else {
+            
         }
         const user = {
             username: username,
             email: email,
             password: password,
-            confirmPassword: confirmPassword
-        };
-
+        }
         fetch('http://localhost:3001/signup', {
             method: 'POST', // or 'PUT'
             headers: {
@@ -34,7 +51,7 @@ function Signup() {
             },
             body: JSON.stringify(user),
         })
-            .then((response) =>{
+            .then((response) => {
                 window.alert("Your information is saved")
             });
     };
@@ -63,13 +80,6 @@ function Signup() {
                         <input
                             value={password}
                             onChange={e => setPassword(e.target.value)}
-                            type="password"
-                            placeholder="Password"
-                            className='m-3 px-4 py-3 rounded-lg bg-gray-700 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'
-                        />
-                        <input
-                            value={confirmPassword}
-                            onChange={e => setConfirmPassword(e.target.value)}
                             type="password"
                             placeholder="Password"
                             className='m-3 px-4 py-3 rounded-lg bg-gray-700 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'

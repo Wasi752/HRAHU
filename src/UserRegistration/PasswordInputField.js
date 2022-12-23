@@ -1,7 +1,7 @@
 function PasswordInputField({ handleValidation, handlePasswordChange, passwordValue, passwordError }) {
     return (
         <>
-            <div className='bg-gray-800 flex flex-col justify-center px-[10%] py-[1%]'>
+            <div className='bg-gray-800 flex flex-col justify-center px-[0%] py-[1%]'>
                 <input
                     type="password"
                     value={passwordValue} 
