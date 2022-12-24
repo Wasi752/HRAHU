@@ -18,21 +18,50 @@ const getB64 = (file, cb) => {
 function Form() {
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("");
     const [image, setImage] = useState("");
 
-    const submit = () => {
+    const isValid = () => {
+        const uppercaseRegExp = /(?=.*?[A-Z])/;
+        const lowercaseRegExp = /(?=.*?[a-z])/;
+        const digitsRegExp = /(?=.*?[0-9])/;
+        const specialCharRegExp = /(?=.*?[#?!@$%^&*-])/;
+        const minLengthRegExp = /.{8,}/;
+        const uppercasePassword = uppercaseRegExp.test(password);
+        const lowercasePassword = lowercaseRegExp.test(password);
+        const digitsPassword = digitsRegExp.test(password);
+        const specialCharPassword = specialCharRegExp.test(password);
+        const minLengthPassword = minLengthRegExp.test(password);
         if (name.length < 5) {
             window.alert(`Name must be contain atleast 5 Characters`);
-            return;
+        } else if (password.length === 0) {
+            window.alert("Password is empty");
+        } else if (!uppercasePassword) {
+            window.alert("At least one Uppercase");
+        } else if (!lowercasePassword) {
+            window.alert("At least one Lowercase");
+        } else if (!digitsPassword) {
+            window.alert("At least one digit");
+        } else if (!specialCharPassword) {
+            window.alert("At least one Special Characters");
+        } else if (!minLengthPassword) {
+            window.alert("At least minumum 8 characters");
+        } else if (email.length < 10) {
+            window.alert("E-mail is not valid");
         }
-        if (password.length < 8) {
-            window.alert(`Password must be contain atleast 8 numbers, Characters & simbole`);
-            return;
+        else {
+            return true;
         }
+        return false;
+    }
+
+    const submit = () => {
+        if (!isValid()) return;
         getB64(image, (imageString) => {
             const user = {
                 name: name,
+                email: email,
                 password: password,
                 confirmPassword: confirmPassword,
                 image: imageString,
@@ -46,6 +75,11 @@ function Form() {
                 body: JSON.stringify(user),
             })
                 .then((response) => window.alert("image is Uploaded"));
+                setName("");
+                setEmail("");
+                setPassword("");
+                setConfirmPassword("");
+                setImage("");
         });
 
     };
@@ -62,15 +96,19 @@ function Form() {
                             <input type="text" value={name} onChange={e => setName(e.target.value)} className={inputClass} />
                         </div>
                         <div className={divClassLeft}>
-                            <label className={lableClass}>02. Password :</label>
+                            <label className={lableClass}>02. E-mail :</label>
+                            <input type="text" value={email} onChange={e => setEmail(e.target.value)} className={inputClass} />
+                        </div>
+                        <div className={divClassLeft}>
+                            <label className={lableClass}>03. Password :</label>
                             <input type="password" value={password} onChange={e => setPassword(e.target.value)} className={inputClass} />
                         </div>
                         <div className={divClassLeft}>
-                            <label className={lableClass}>03. Confirm Password :</label>
+                            <label className={lableClass}>04. Confirm Password :</label>
                             <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} className={inputClass} />
                         </div>
                         <div className={divClassLeft}>
-                            <label className={lableClass}>03. Image :</label>
+                            <label className={lableClass}>05. Image :</label>
                             <input type="file"
                                 onChange={e => setImage(e.target.files[0])}
                                 className={inputClass} />
