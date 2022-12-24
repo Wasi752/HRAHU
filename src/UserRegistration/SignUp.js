@@ -7,12 +7,7 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const signup = () => {
-        if (username.length < 5) {
-            window.alert(`Name must be contain atleast 5 Characters`);
-            return;
-        }
-
+    const isValid = () => {
         const uppercaseRegExp = /(?=.*?[A-Z])/;
         const lowercaseRegExp = /(?=.*?[a-z])/;
         const digitsRegExp = /(?=.*?[0-9])/;
@@ -23,8 +18,9 @@ function Signup() {
         const digitsPassword = digitsRegExp.test(password);
         const specialCharPassword = specialCharRegExp.test(password);
         const minLengthPassword = minLengthRegExp.test(password);
-
-        if (password.length === 0) {
+        if (username.length < 5) {
+            window.alert(`Name must be contain atleast 5 Characters`);
+        } else if (password.length === 0) {
             window.alert("Password is empty");
         } else if (!uppercasePassword) {
             window.alert("At least one Uppercase");
@@ -36,9 +32,17 @@ function Signup() {
             window.alert("At least one Special Characters");
         } else if (!minLengthPassword) {
             window.alert("At least minumum 8 characters");
-        } else {
-            
+        } else if (email.length < 10) {
+            window.alert("E-mail is not valid");
+
         }
+        else {
+            return true;
+        }
+        return false;
+    }
+    const signup = () => {
+        if (!isValid()) return;
         const user = {
             username: username,
             email: email,
@@ -52,7 +56,10 @@ function Signup() {
             body: JSON.stringify(user),
         })
             .then((response) => {
-                window.alert("Your information is saved")
+                window.alert("Your information is saved");
+                setUsername("");
+                setEmail("");
+                setPassword("");
             });
     };
 
