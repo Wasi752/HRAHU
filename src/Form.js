@@ -17,8 +17,9 @@ const getB64 = (file, cb) => {
 }
 function Form() {
     const [name, setName] = useState("");
-    const [password, setPassword] = useState("");
     const [email, setEmail] = useState("")
+    const [mobileNumber, setMobileNumber] = useState("");
+    const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [image, setImage] = useState("");
 
@@ -35,6 +36,8 @@ function Form() {
         const minLengthPassword = minLengthRegExp.test(password);
         const validEmailAddress = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         const validEmail = validEmailAddress.test(email);
+        const validMobileNumber = /^[0-9]*$/;
+        const validNumber = validMobileNumber.test(mobileNumber);
 
         if (name.length < 5) {
             window.alert(`Name must be contain atleast 5 Characters`);
@@ -58,6 +61,10 @@ function Form() {
             window.alert("E-mail is not valid");
         } else if (!validEmail){
             window.alert("Email Addre must be in valid formate with @ symbol");
+        } else if (mobileNumber.length < 11){
+            window.alert("Mobile number is not valid");
+        }else if (!validNumber){
+            window.alert("Mobile Number must be in valid formate");
         }
         else {
             return true;
@@ -71,6 +78,7 @@ function Form() {
             const user = {
                 name: name,
                 email: email,
+                mobileNumber: mobileNumber,
                 password: password,
                 confirmPassword: confirmPassword,
                 image: imageString,
@@ -86,6 +94,7 @@ function Form() {
                 .then((response) => window.alert("Data & Image is Uploaded"));
                 setName("");
                 setEmail("");
+                setMobileNumber("");
                 setPassword("");
                 setConfirmPassword("");
                 setImage("");
@@ -109,15 +118,19 @@ function Form() {
                             <input type="text" value={email} onChange={e => setEmail(e.target.value)} className={inputClass} />
                         </div>
                         <div className={divClassLeft}>
-                            <label className={lableClass}>03. Password :</label>
+                            <label className={lableClass}>03. Mobile Number :</label>
+                            <input type="text" value={mobileNumber} onChange={e => setMobileNumber(e.target.value)} className={inputClass} />
+                        </div>
+                        <div className={divClassLeft}>
+                            <label className={lableClass}>04. Password :</label>
                             <input type="password" value={password} onChange={e => setPassword(e.target.value)} className={inputClass} />
                         </div>
                         <div className={divClassLeft}>
-                            <label className={lableClass}>04. Confirm Password :</label>
+                            <label className={lableClass}>05. Confirm Password :</label>
                             <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} className={inputClass} />
                         </div>
                         <div className={divClassLeft}>
-                            <label className={lableClass}>05. Image :</label>
+                            <label className={lableClass}>06. Image :</label>
                             <input type="file"
                                 onChange={e => setImage(e.target.files[0])}
                                 className={inputClass} />
