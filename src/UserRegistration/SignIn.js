@@ -31,7 +31,9 @@ function Signin() {
                     //window.alert(`Signed in as ${body.username}`)
                 }
                 else {
-                    window.alert(`No user exists with user name: ${username}`)
+                    window.alert(`No user exists with ${username} or ${password} `);
+                    setUsername("");
+                    setPassword("");
                 }
             });
     };

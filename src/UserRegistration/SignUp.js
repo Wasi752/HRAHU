@@ -6,6 +6,7 @@ function Signup() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     const isValid = () => {
         const uppercaseRegExp = /(?=.*?[A-Z])/;
@@ -32,9 +33,10 @@ function Signup() {
             window.alert("At least one Special Characters");
         } else if (!minLengthPassword) {
             window.alert("At least minumum 8 characters");
-        } else if (email.length < 10) {
+        } else if(confirmPassword !== password){
+            window.alert("Confirm password is not matched");
+        }else if (email.length < 10) {
             window.alert("E-mail is not valid");
-
         }
         else {
             return true;
@@ -47,6 +49,7 @@ function Signup() {
             username: username,
             email: email,
             password: password,
+            confirmPassword: confirmPassword
         }
         fetch('http://localhost:3001/signup', {
             method: 'POST', // or 'PUT'
@@ -60,6 +63,7 @@ function Signup() {
                 setUsername("");
                 setEmail("");
                 setPassword("");
+                setConfirmPassword("");
             });
     };
 
@@ -67,7 +71,7 @@ function Signup() {
         <div className="flex w-screen h-screen bg-gray-900">
             <div className="w-4/12 h-full"></div>
             <div className="w-4/12 h-full mt-[6%]">
-                <div className='bg-gray-800 flex flex-col justify-center px-[10%] py-[20%]'>
+                <div className='bg-gray-800 flex flex-col justify-center px-[10%] py-[10%]'>
                     <form className='flex flex-col w-full text-white'>
                         <h2 className='text-4xl text-teal-500 font-bold text-center py-7'>SIGNUP</h2>
                         <input
@@ -89,6 +93,13 @@ function Signup() {
                             onChange={e => setPassword(e.target.value)}
                             type="password"
                             placeholder="Password"
+                            className='m-3 px-4 py-3 rounded-lg bg-gray-700 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'
+                        />
+                        <input
+                            value={confirmPassword}
+                            onChange={e => setConfirmPassword(e.target.value)}
+                            type="password"
+                            placeholder="Confirm Password"
                             className='m-3 px-4 py-3 rounded-lg bg-gray-700 focus:border-blue-500 focus:bg-gray-800 focus:outline-none'
                         />
                         <button

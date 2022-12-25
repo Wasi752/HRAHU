@@ -33,6 +33,9 @@ function Form() {
         const digitsPassword = digitsRegExp.test(password);
         const specialCharPassword = specialCharRegExp.test(password);
         const minLengthPassword = minLengthRegExp.test(password);
+        const validEmailAddress = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const validEmail = validEmailAddress.test(email);
+
         if (name.length < 5) {
             window.alert(`Name must be contain atleast 5 Characters`);
         } else if (password.length === 0) {
@@ -47,8 +50,14 @@ function Form() {
             window.alert("At least one Special Characters");
         } else if (!minLengthPassword) {
             window.alert("At least minumum 8 characters");
+        } else if(confirmPassword.length === 0){
+            window.alert("Confirm Password is empty");
+        } else if(confirmPassword !== password){
+            window.alert("Confirm password is not matched");
         } else if (email.length < 10) {
             window.alert("E-mail is not valid");
+        } else if (!validEmail){
+            window.alert("Email Addre must be in valid formate with @ symbol");
         }
         else {
             return true;
@@ -74,7 +83,7 @@ function Form() {
                 },
                 body: JSON.stringify(user),
             })
-                .then((response) => window.alert("image is Uploaded"));
+                .then((response) => window.alert("Data & Image is Uploaded"));
                 setName("");
                 setEmail("");
                 setPassword("");
