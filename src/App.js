@@ -21,6 +21,7 @@ import StudentRegistrationForm from './Registration/StudentRegistrationForm';
 import Registration from './Registration/Registration';
 import FazilatResults from './Registration/FazilatResult';
 import PasswordAndConfirmPasswordValidation from './UserRegistration/PasswordAndConfirmPasswordValidation';
+import Basic from './Login';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/reg/studentlist" element={<MadrasaRegForm />} />
         <Route path="/form" element={<Form />} />
         <Route path="/passvalidation" element={<PasswordAndConfirmPasswordValidation />} />
+        <Route path="/login" element={<Basic />} />
       </Routes>
      
     </div>
