@@ -1,10 +1,10 @@
 import React from 'react';
 import { Formik } from 'formik';
 
-const inputClass = "h-[10%] w-[35%] p-4 border border-blue-300 rounded-md m-1";
+const inputClass = "h-[10%] w-[50%] p-4 border border-blue-300 rounded-md m-1";
 const lableClass = "ml-0 pr-2 mt-5 text-xl font-bold";
 const divClassRight = "flex flex-col w-full h-full ml-40";
-const divClassLeft = "flex flex-col w-full h-full ml-56";
+const divClassLeft = "flex flex-col w-full h-full ml-72";
 
 const validate = values => {
     const errors = {};
@@ -52,12 +52,12 @@ const form = ({
     /* and other goodies */
 }) => (
     <div className="w-full h-full flex mt-20 mb-56">
-        <div className="w-[10%] h-full"></div>
+        <div className="w-[20%] h-full"></div>
 
-        <div className="w-[80%] h-full bg-gray-100 ">
-            <p className="mt-5 mb-10 text-3xl text-red-700 font-bold font-serif text-left text-center">Enter Staff Information</p>
+        <div className="w-[60%] h-full bg-gray-100 ">
+            <p className="mt-5 mb-10 text-3xl text-red-700 font-bold font-serif text-left text-center">Enter Your Information</p>
             <div className="flex w-full h-full justify-center divide-x-2 divide-slate-500">
-                <div className="mt-1 flex flex-col w-full h-full ">
+                <div className="mt-1 flex flex-col w-full h-full">
                     <form onSubmit={handleSubmit}>
                         <div className={divClassLeft}>
                             <label className={lableClass}>01. Name :</label>
@@ -135,12 +135,13 @@ const form = ({
                             <button
                                 type="button"
                                 disabled={isSubmitting}
-                                className="text-center text-2xl text-white font-bold h-[10%] w-[35%] p-4 border border-blue-300 rounded-md ml-16 mb-5 mr-3 mt-12 bg-blue-600 hover:text-blue-300">Submit</button>
+                                className="text-center text-2xl text-white font-bold h-[10%] w-[50%] p-4 border border-blue-300 rounded-md ml-32 mb-5 mr-3 mt-12 bg-blue-600 hover:text-blue-300">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        <div className="w-[20%] h-full"></div>
     </div>
 
 )

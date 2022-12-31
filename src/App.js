@@ -21,7 +21,7 @@ import StudentRegistrationForm from './Registration/StudentRegistrationForm';
 import Registration from './Registration/Registration';
 import FazilatResults from './Registration/FazilatResult';
 import PasswordAndConfirmPasswordValidation from './UserRegistration/PasswordAndConfirmPasswordValidation';
-import Basic from './Login';
+import Basic from './UserRegistration/Login';
 
 function App() {
   return (
