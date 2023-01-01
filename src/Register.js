@@ -26,7 +26,7 @@ const validate = values => {
     else if (values.mobile.length < 11) {
         errors.mobile = 'Mobile number is not valid';
     }
-    else if (!/^[0-9]*$/i.test(values.mobile)){
+    else if (!/^[0-9]*$/i.test(values.mobile)) {
         errors.mobile = 'Mobile Number must be in valid formate';
     }
     if (!values.password) {
@@ -55,21 +55,20 @@ const validate = values => {
 }
 const onSubmit = (values, { setSubmitting }) => {
 
-    console.log('Alif is not Ba');
-    alert(JSON.stringify(values, null, 2));
+        fetch('http://localhost:3001/user', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(values),
+        })
+            .then((response) => alert(JSON.stringify(values, null, 2)));
     setSubmitting(false);
 
 }
-const form = ({
-    values,
-    errors,
-    touched,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    isSubmitting,
-    /* and other goodies */
-}) => (
+const form = ({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting}) =>
+
+(
     <div className="w-full h-full flex mt-20 mb-56">
         <div className="w-[20%] h-full"></div>
 
@@ -162,7 +161,7 @@ const form = ({
                                 disabled={isSubmitting}
                                 className="text-center text-2xl text-white font-bold h-[10%] w-[50%] p-4 border border-blue-300 rounded-md ml-32 mb-5 mr-3 mt-12 bg-blue-600 hover:text-blue-300">
                                 Submit
-                                </button>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -173,7 +172,7 @@ const form = ({
 
 )
 const iValue = { name: '', email: '', mobile: '', password: '', confirmPassword: '', image: '' }
-const Basic = () => (
+const Register = () => (
     <div>
         <Formik
             initialValues={iValue}
@@ -185,4 +184,4 @@ const Basic = () => (
     </div>
 );
 
-export default Basic;
+export default Register;
