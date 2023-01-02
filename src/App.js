@@ -19,6 +19,7 @@ import FazilatResults from './Registration/FazilatResult';
 import PasswordAndConfirmPasswordValidation from './UserRegistration/PasswordAndConfirmPasswordValidation';
 import Basic from './UserRegistration/Login';
 import Register from './Register';
+import Confirmation from './Registration/Confermation';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/passvalidation" element={<PasswordAndConfirmPasswordValidation />} />
         <Route path="/login" element={<Basic/>} />
         <Route path="/register" element={<Register/>} />
+        <Route path="/confirm/:menu" element={<Confirmation/>} />
       </Routes>
      
     </div>
