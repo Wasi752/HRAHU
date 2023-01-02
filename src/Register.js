@@ -55,18 +55,21 @@ const validate = values => {
 }
 const onSubmit = (values, { setSubmitting }) => {
 
-        fetch('http://localhost:3001/user', {
+        fetch('http://localhost:3001/users', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(values),
         })
-            .then((response) => alert(JSON.stringify(values, null, 2)));
-    setSubmitting(false);
+            .then((response) => {
+                alert(JSON.stringify(values, null, 2))
+                setSubmitting(false);
+            });
+    
 
 }
-const form = ({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting}) =>
+const Form = ({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting}) =>
 
 (
     <div className="w-full h-full flex mt-20 mb-56">
@@ -177,9 +180,9 @@ const Register = () => (
         <Formik
             initialValues={iValue}
             validate={validate}
+            component={Form}
             onSubmit={onSubmit}
         >
-            {form}
         </Formik>
     </div>
 );
