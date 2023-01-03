@@ -55,7 +55,7 @@ function Latter({
                 <p className={para}>Monthly Safaye Group : {safaye}</p>
             </div>
             <div className="w-[30%] h-full ml-5 mt-20 justify-right">
-                <img src={"/" + image} alt="" className="w-[90%] h-full ml-1" />
+                <img src={"/" + image} alt="" className="w-[85%] h-[43%] ml-1" />
 
             </div>
         </div>
@@ -111,19 +111,19 @@ function Confirmation() {
             });
     }, [roll]);
     return (
-        <div className="w-full h-full flex">
-            <div className="w-2/12 h-full bg-gray-100"></div>
-            <div className="w-8/12 h-full flex flex-col">
+        <div className="w-full h-screen flex">
+            <div className="w-2/12 h-full"></div>
+            <div className="w-8/12 h-full flex flex-col mb-10">
 
-                <p className="text-center text-5xl text-red-700 font-serif font-bold mt-20"> Confermation Latter about Your Admission</p>
+                <p className="text-center text-5xl text-red-700 font-serif font-bold mt-10"> Confermation Latter about Your Admission</p>
                 <p className="text-center text-3xl text-blue-800 font-serif font-bold mt-5">{madrasaName}</p>
                 <p className="text-center text-3xl text-yellow-900 font-serif font-bold mt-5">জামাত : {jamat}</p>
-                <p className="text-3xl text-left text-green-700 font-serif font-bold mt-20 mb-10">Your Admission has done</p>
+                <p className="text-3xl text-left text-green-700 font-serif font-bold mt-10 mb-10">Your Admission has done</p>
 
                 {confirm}
 
             </div>
-            <div className="w-2/12 h-full bg-gray-100"></div>
+            <div className="w-2/12 h-full"></div>
         </div>
     );
 }
