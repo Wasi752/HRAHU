@@ -24,7 +24,6 @@ import Confirmation from './Registration/Confermation';
 function App() {
   return (
     <div className="w-full h-full">
-      
       <Routes>
         <Route path="/" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />

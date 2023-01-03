@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+const para = "text-2xl font-serif m-1";
 function Latter({
     i,
     id,
@@ -29,32 +30,32 @@ function Latter({
     image
 }) {
     return (
-        <div className="flex flex-row">
-            <div className="text-lg ml-10 mt-5 text-left w-[60%] h-[35%]">
-                <p className="font-serif">{id}</p>
-                <p className="text-xl text-red-500 font-bold font-serif">{name}</p>
-                <p className="text-lg font-serif">{father}</p>
-                <p className="text-lg font-serif">{mother}</p>
-                <p className="text-lg font-serif">{presentAddress}</p>
-                <p className="text-lg font-serif">{permanentAddress}</p>
-                <p className="text-lg font-serif">{nationality}</p>
-                <p className="text-lg font-serif">Date of Brith:{brith}</p>
-                <p className="text-lg font-serif">NID:{nid}</p>
-                <p className="font-serif">{contactNo}</p>
-                <p className="font-serif">{email}</p>
-                <p className="font-serif">Room No:{roomNo}</p>
-                <p className="font-serif">Sit No{sitNo}</p>
-                <p className="font-serif">Date of Brith:{brith}</p>
-                <p className="font-serif">Last Jamat & Class Roll:{exJamat}, {classRool}</p>
-                <p className="text-lg font-serif">Last Exam Name & Rool:{exexamName}, {examRoll}</p>
-                <p className="text-lg font-serif">Last Year Dhakila No:{exDakhila}</p>
-                <p className="text-lg font-serif">Admited Jamat & Dakhila No:{isJamat}, {dakhilaNo}</p>
-                <p className="font-serif">Hifzul Quraan Dawr Group:{hifzDawr}</p>
-                <p className="font-serif">Weekly Taqrir Group :{taqrir}</p>
-                <p className="font-serif">Monthly Safaye Group:{safaye}</p>
+        <div className="flex flex-row border border-green-600">
+            <div className="text-lg ml-10 mt-5 text-left w-[70%] h-[75%] mb-5 mt-10 ">
+                <p className={para}>Dakhila NO : {id}</p>
+                <p className="text-xl text-red-500 font-bold font-serif">Name : {name}</p>
+                <p className={para}>Father Name : {father}</p>
+                <p className={para}>Mother Name : {mother}</p>
+                <p className={para}>Present Address : {presentAddress}</p>
+                <p className={para}>Permanent Address : {permanentAddress}</p>
+                <p className={para}> Nationality : {nationality}</p>
+                <p className={para}>Date of Brith : {brith}</p>
+                <p className={para}>NID :{nid}</p>
+                <p className={para}>Contact No : {contactNo}</p>
+                <p className={para}>E-mail : {email}</p>
+                <p className={para}>Room No : {roomNo}</p>
+                <p className={para}>Sit No : {sitNo}</p>
+                <p className={para}>Date of Brith : {brith}</p>
+                <p className={para}>Last Jamat & Class Roll : {exJamat}, {classRool}</p>
+                <p className={para}>Last Exam Name & Rool : {exexamName}, {examRoll}</p>
+                <p className={para}>Last Year Dhakila No : {exDakhila}</p>
+                <p className={para}>Admited Jamat & Dakhila No: {isJamat}, {dakhilaNo}</p>
+                <p className={para}>Hifzul Quraan Dawr Group : {hifzDawr}</p>
+                <p className={para}>Weekly Taqrir Group : {taqrir}</p>
+                <p className={para}>Monthly Safaye Group : {safaye}</p>
             </div>
-            <div className="w-[30%] h-[35%] ml-40 mt-10 justify-right ">
-                <img src={"/" + image} alt="" className="w-[90%] h-[80%] ml-1" />
+            <div className="w-[30%] h-full ml-5 mt-20 justify-right">
+                <img src={"/" + image} alt="" className="w-[90%] h-full ml-1" />
 
             </div>
         </div>
@@ -64,52 +65,63 @@ function Latter({
 
 function Confirmation() {
     const [confirm, setConfirm] = useState();
+    const [madrasaName, setMadrasaName] = useState("");
+    const [jamat, setJamat] = useState("");
     const { menu } = useParams();
     const roll = parseInt(menu);
 
     useEffect(() => {
-        fetch('http://localhost:3001/results')
+        fetch('http://localhost:3001/fazilatResult')
             .then((response) => response.json())
             .then((data) => {
-                const y = data.filter((x) => x.roll === roll)[0];
-                setConfirm(
-                    <Latter
-                        id={(y.roll - y.roll) + 1}
-                        name={y.name}
-                        father={y.fname}
-                        mother={y.mother}
-                        presentAddress={y.vill + y.post + y.thana + y.jela}
-                        permanentAddress={y.vill + y.post + y.thana + y.jela}
-                        nationality={y.nationality}
-                        brith={y.dateofBirth}
-                        nid={y.nid}
-                        exDakhila={y.exDakhila}
-                        exJamat={y.exJamat}
-                        classRool={y.classRool}
-                        exexamName={y.exexamName}
-                        examRoll={y.examRoll}
-                        isJamat={y.isJamat}
-                        dakhilaNo={y.dakhilaNo}
-                        contactNo={y.contactNo}
-                        email={y.email}
-                        roomNo={y.roomNo}
-                        sitNo={y.sitNo}
-                        hifzDawr={y.hifzDawr}
-                        taqrir={y.taqrir}
-                        safaye={y.safaye}
-                        image={y.image}
-                    />);
+                const con = data.filter((x) => x.roll === roll)
+                    .map((y, i) =>
+                        <Latter
+                            id={i + 1}
+                            name={y.name}
+                            father={y.fname}
+                            mother={y.mother}
+                            presentAddress={`${y.vill}, ${y.post}, ${y.thana}, ${y.jela}`}
+                            permanentAddress={`${y.vill}, ${y.post}, ${y.thana}, ${y.jela}`}
+                            nationality={y.nationality}
+                            brith={y.dateOfBirth}
+                            nid={y.nid}
+                            exDakhila={y.exDakhila}
+                            exJamat={y.exJamat}
+                            classRool={y.classRool}
+                            exexamName={y.exexamNam}
+                            examRoll={y.examRoll}
+                            isJamat={y.isJamat}
+                            dakhilaNo={y.dakhilaNo}
+                            contactNo={y.contactNo}
+                            email={y.email}
+                            roomNo={y.roomNo}
+                            sitNo={y.sitNo}
+                            hifzDawr={y.hifzDawr}
+                            taqrir={y.taqrir}
+                            safaye={y.safaye}
+                            image={y.image} />);
+                setConfirm(con);
+                const nam = data.filter((f) => f.roll === roll)
+                    .map(x => x.madrasa);
+                setMadrasaName(nam[0]);
+                const jamat = data.filter((f) => f.roll === roll)
+                    .map(x => x.jamat);
+                setJamat(jamat[0]);
             });
     }, [roll]);
     return (
         <div className="w-full h-full flex">
             <div className="w-2/12 h-full bg-gray-100"></div>
-            <div className="w-8/12 h-full">
-                <div>
-                    <p className="text-center text-5xl text-red-700 font-serif font-bold"> Confermation Latter about Your Admission</p>
-                    <p>Your Admission has done</p>
-                </div>
+            <div className="w-8/12 h-full flex flex-col">
+
+                <p className="text-center text-5xl text-red-700 font-serif font-bold mt-20"> Confermation Latter about Your Admission</p>
+                <p className="text-center text-3xl text-blue-800 font-serif font-bold mt-5">{madrasaName}</p>
+                <p className="text-center text-3xl text-yellow-900 font-serif font-bold mt-5">জামাত : {jamat}</p>
+                <p className="text-3xl text-left text-green-700 font-serif font-bold mt-20 mb-10">Your Admission has done</p>
+
                 {confirm}
+
             </div>
             <div className="w-2/12 h-full bg-gray-100"></div>
         </div>
