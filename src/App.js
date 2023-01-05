@@ -20,6 +20,7 @@ import PasswordAndConfirmPasswordValidation from './UserRegistration/PasswordAnd
 import Basic from './UserRegistration/Login';
 import Register from './Register';
 import Confirmation from './Registration/Confermation';
+import SafayeeGroups from './Registration/SafayeeGroup';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="/login" element={<Basic/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/confirm/:menu" element={<Confirmation/>} />
+        <Route path="/safayee/:menu" element={<SafayeeGroups/>} />
       </Routes>
      
     </div>
