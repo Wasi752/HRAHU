@@ -1,4 +1,3 @@
-import { results } from "./resultData"
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -34,22 +33,22 @@ export function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1
 
     )
 };
-const divisions = results.map(c => c.bukhari1 + c.bukhari2 + c.muslim1 + c.muslim2 + c.tirmizi1 + c.tirmizi2 + c.abudaud + c.nasayee + c.tahabi + c.muwattan)
-    .map(d => {
-        let division;
-        if (d > 799) {
-            division = "Mumtaj";
-        } else if (d > 649) {
-            division = "Jaiyed Jiddan";
-        } else if (d > 499) {
-            division = "Jaiyed";
-        } else if (d > 329) {
-            division = "Maqbul";
-        } else {
-            division = "Rasib";
-        }
-        return division;
-    });
+// const divisions = results.map(c => c.bukhari1 + c.bukhari2 + c.muslim1 + c.muslim2 + c.tirmizi1 + c.tirmizi2 + c.abudaud + c.nasayee + c.tahabi + c.muwattan)
+//     .map(d => {
+//         let division;
+//         if (d > 799) {
+//             division = "Mumtaj";
+//         } else if (d > 649) {
+//             division = "Jaiyed Jiddan";
+//         } else if (d > 499) {
+//             division = "Jaiyed";
+//         } else if (d > 329) {
+//             division = "Maqbul";
+//         } else {
+//             division = "Rasib";
+//         }
+//         return division;
+//     });
 function MadrasaResults() {
     const tbl = "border border-green-300 p-3 text-center";
     const { menu } = useParams();

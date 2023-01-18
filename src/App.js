@@ -21,6 +21,7 @@ import Basic from './UserRegistration/Login';
 import Register from './Register';
 import Confirmation from './Registration/Confermation';
 import SafayeeGroups from './Registration/SafayeeGroup';
+import StaffInfoUpdate from './Staff/StaffDataUpdate';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/summary" element={<StaffSummary />} />
         <Route path="/summary/staff" element={<StaffForm />}/>
         <Route path="/sdetails/:id" element={<StaffDetails/>} />
+        <Route path="/sdetails/:id/edit" element={<StaffInfoUpdate/>} />
         <Route path="/form" element={<Form />} />
         <Route path="/board" element={<BoardList/>} />
         <Route path="/work" element={<WorksEvent/>} />

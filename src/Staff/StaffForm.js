@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import data from "./data";
 
 const inputClass = "h-[10%] w-[65%] p-4 border border-blue-300 rounded-md m-1";
 const lableClass = "ml-0 pr-2 mt-5 text-xl font-bold";
@@ -42,7 +41,7 @@ function StaffForm() {
                 father: father,
                 mother: mother,
                 present_address: paddress,
-                permanent_ddress: peraddres,
+                permanent_address: peraddres,
                 academic_achievement: academic,
                 languages_skills: language,
                 designation: designation,
@@ -55,7 +54,7 @@ function StaffForm() {
                 nid: nid,
 
             }
-            fetch('http://localhost:3001/create-employee', {
+            fetch('http://localhost:3001/employees', {
                 method: 'POST', // or 'PUT'
                 headers: {
                     'Content-Type': 'application/json',

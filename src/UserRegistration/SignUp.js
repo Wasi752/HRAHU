@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import PasswordAndConfirmPasswordValidation from "./PasswordAndConfirmPasswordValidation";
 
 function Signup() {
     const [username, setUsername] = useState("");

@@ -40,11 +40,11 @@ function StaffDetails() {
     const navigate = useNavigate();
 
     const deleteData = () => {
-        fetch('http://localhost:3001/employees' + id, {
+        fetch('http://localhost:3001/employees/' + id, {
             method: 'DELETE'
         })
             .then((response) => {
-                navigate("/");
+                navigate("/summary");
             });
 
     }
@@ -86,8 +86,9 @@ function StaffDetails() {
                         <p className="text-2xl font-serif font-extrabold ml-10 mb-5 mt-10 text-blue-500">Staff Details</p>
                     </div>
                     <div className="w-[20%] flex">
-                        <img src="/editIcon.jpeg" className="w-[20%] h-[40%] mt-10 " />
-                        <img src="/deleteIcon.jpeg" className="w-[16%] h-[40%] mt-10 ml-5" onClick={deleteData} />
+                    <Link to={"/sdetails/" + (idNo + "/edit")}>
+                        <img src="/editIcon.jpeg" className="w-[70%] h-[30%] mt-10" alt="Update Profile"/></Link>
+                        <img src="/deleteIcon.jpeg" className="w-[16%] h-[30%] mt-10 ml-5" alt="Update Profile" onClick={deleteData} />
                     </div>
 
                 </div>
