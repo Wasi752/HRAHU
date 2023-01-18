@@ -1,5 +1,8 @@
 
 import { useState } from "react";
+import { BASE_URL, FETCH } from "../Config";
+import { useNavigate } from "react-router-dom";
+
 
 const inputClass = "h-[10%] w-[65%] p-4 border border-blue-300 rounded-md m-1";
 const lableClass = "ml-0 pr-2 mt-5 text-xl font-bold";
@@ -33,6 +36,8 @@ function StaffForm() {
     const [nationality, setNationality] = useState("");
     const [brith, setBrith] = useState("");
     const [nid, setNid] = useState("");
+    const navigate = useNavigate();
+
 
     const submit = () => {
         getB64(image, (imageString) => {
@@ -54,15 +59,7 @@ function StaffForm() {
                 nid: nid,
 
             }
-            fetch('http://localhost:3001/employees', {
-                method: 'POST', // or 'PUT'
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(user),
-            })
-                .then((response) => window.alert("Data & image are Sent"));
-
+            FETCH('POST', user, '', navigate)
         });
     };
     return (

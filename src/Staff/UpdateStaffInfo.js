@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { BASE_URL, FETCH } from "../Config";
 
 
 const inputClass = "h-[10%] w-[65%] p-4 border border-blue-300 rounded-md m-1";
@@ -56,7 +57,7 @@ function UpdateStaffData() {
                 nid: nid,
 
             }
-            fetch('http://localhost:3001/employees/' + id, {
+            fetch(BASE_URL + id, {
                 method: 'PUT', 
                 headers: {
                     'Content-Type': 'application/json',

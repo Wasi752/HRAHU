@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import { useEffect, useState } from 'react';
+import { BASE_URL, GET } from "../Config";
 
 
 function StaffSummaryDiv({id, name, designation, contact_no, e_mail, image, i}){
@@ -31,20 +32,13 @@ function StaffSummary(){
     const [staff, setStaff] = useState();
     
     useEffect(() => {
-        fetch('http://localhost:3001/employees')
-      .then((response) => response.json())
-      .then((data) => {
+       GET('', (data) => {
     const xyz = data
     .filter((len, i) => i < (3 * pageNo) && i >= (3 * (pageNo - 1)))
     .map((a, i) => 
         <StaffSummaryDiv
         i={i + 1 + (3 * (pageNo - 1))} 
-        id={a.id} 
-        name={a.name} 
-        designation={a.designation} 
-        contact_no={a.contact_no} 
-        e_mail={a.e_mail} 
-        image={a.image}/>);
+        {...a}/>);
       
         setStaff(xyz);
       });

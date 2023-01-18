@@ -1,7 +1,10 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { BASE_URL, FETCH, GET } from "../Config";
 
+const CLS =(value)=> 
+<p className="text-lg font-serif">{value}</p>
 
 function StaffDetail({ i, id, name, father, mother, present_address, permanent_address, academic_achievement, languages_skills, designation, contact_no, e_mail, room_no, nationality, brith, nid, image }) {
 
@@ -10,19 +13,19 @@ function StaffDetail({ i, id, name, father, mother, present_address, permanent_a
             <div className="text-lg ml-10 mt-5 text-left w-[60%] h-[35%]">
                 <p className="font-serif">{id}</p>
                 <p className="text-xl text-red-500 font-bold font-serif">{name}</p>
-                <p className="text-lg font-serif">{father}</p>
-                <p className="text-lg font-serif">{mother}</p>
-                <p className="text-lg font-serif">{present_address}</p>
-                <p className="text-lg font-serif">{permanent_address}</p>
-                <p className="text-lg font-serif">{academic_achievement}</p>
-                <p className="text-lg font-serif">{languages_skills}</p>
-                <p className="text-lg font-serif">{designation}</p>
-                <p className="font-serif">{contact_no}</p>
-                <p className="font-serif">{e_mail}</p>
-                <p className="font-serif">Room No:{room_no}</p>
-                <p className="font-serif">{nationality}</p>
-                <p className="font-serif">Date of Brith:{brith}</p>
-                <p className="font-serif">NID:{nid}</p>
+                {CLS(father)}
+                {CLS(mother)}
+                {CLS(present_address)}
+                {CLS(permanent_address)}
+                {CLS(academic_achievement)}
+                {CLS(languages_skills)}
+                {CLS(designation)}
+                {CLS(contact_no)}
+                {CLS(e_mail)}
+                {CLS('Room No:' + room_no)}
+                {CLS(nationality)}
+                {CLS('Date of Brith:' + brith)}
+                {CLS('NID:' + nid)}
             </div>
             <div className="w-[30%] h-[35%] ml-40 mt-10 justify-right ">
                 <img src={"/" + image} alt="Staff of Al-Haitul Ulya" className="w-[90%] h-[80%] ml-1" />
@@ -40,38 +43,17 @@ function StaffDetails() {
     const navigate = useNavigate();
 
     const deleteData = () => {
-        fetch('http://localhost:3001/employees/' + id, {
-            method: 'DELETE'
-        })
-            .then((response) => {
-                navigate("/summary");
-            });
+        FETCH('DELETE', {}, id, navigate)
 
     }
     useEffect(() => {
-        fetch('http://localhost:3001/employees')
-            .then((response) => response.json())
-            .then((data) => {
+        
+           GET('',(data) => {
                 const y = data.filter((x) => x.id === idNo)[0];
                 setStaff(
                     <StaffDetail
                         i={y.id}
-                        id={y.id}
-                        name={y.name}
-                        father={y.father}
-                        mother={y.mother}
-                        present_address={y.present_address}
-                        permanent_address={y.permanent_address}
-                        academic_achievement={y.academic_achievement}
-                        languages_skills={y.languages_skills}
-                        designation={y.designation}
-                        contact_no={y.contact_no}
-                        e_mail={y.e_mail}
-                        room_no={y.room_no}
-                        nationality={y.nationality}
-                        brith={y.brith}
-                        nid={y.nid}
-                        image={y.image}
+                        {...y}
                     />
                 );
             });
@@ -95,7 +77,7 @@ function StaffDetails() {
 
 
                 <div>
-                    <p className="justify-left">{staff}</p>
+                    <div className="justify-left">{staff}</div>
 
                 </div>
                 <div className="flex w-full">

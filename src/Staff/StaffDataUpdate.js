@@ -4,10 +4,27 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import * as Yup from 'yup'
+import { BASE_URL, FETCH } from '../Config';
 
 const inputClass = "h-[10%] w-[50%] p-4 border border-blue-300 rounded-md m-1";
 const divClassRight = "flex flex-col w-full h-full ml-40";
 const divClassLeft = "flex flex-col w-full h-full ml-72";
+const INPUT =(name, placeholder, handleChange, handleBlur, values, touched, errors)=>
+<div className={divClassLeft}>
+                            <input
+                                type='text'
+                                name={name}
+                                placeholder={placeholder}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values[name]}
+                                className={inputClass}
+                            />
+                            <span className='text-red-500'>
+                                {touched[name] && errors[name]}
+                            </span>
+
+                        </div>
 
 const StaffSchema = Yup.object().shape({
     Name: Yup.string()
@@ -65,9 +82,11 @@ const StaffSchema = Yup.object().shape({
         .max(50, 'Too Long!')
         .required('Required'),
 });
-const Form = ({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) =>
+const Form = ({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) =>{
+const INPUT_=(name, placeholder)=>
+INPUT(name, placeholder, handleChange, handleBlur, values, touched, errors)
 
-(
+return (
     <div className="w-full h-full flex mt-20 mb-56">
         <div className="w-[20%] h-full"></div>
 
@@ -77,119 +96,14 @@ const Form = ({ values, errors, touched, handleChange, handleBlur, handleSubmit,
 
                 <form onSubmit={handleSubmit}>
                     <div className="mt-1 flex flex-col w-full h-full">
-                        <div className={divClassLeft}>
-                            <input
-                                type='text'
-                                name='name'
-                                placeholder='Enter Name'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.name}
-                                className={inputClass}
-                            />
-                            <span className='text-red-500'>
-                                {touched.name && errors.name}
-                            </span>
-
-                        </div>
-                        <div className={divClassLeft}>
-                            <input
-                                type="text"
-                                name='father'
-                                placeholder='Enter Father Name'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.father}
-                                className={inputClass}
-                            />
-                            <span className='text-red-500'>
-                                {touched.father && errors.father}
-                            </span>
-                        </div>
-                        <div className={divClassLeft}>
-                            <input
-                                type="text"
-                                name='mother'
-                                placeholder='Enter Mother Name'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.mother}
-                                className={inputClass}
-                            />
-                            <span className='text-red-500'>
-                                {touched.mother && errors.mother}
-                            </span>
-                        </div>
-                        <div className={divClassLeft}>
-                            <input
-                                type="text"
-                                name="present_address"
-                                placeholder='Present Address'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.present_address}
-                                className={inputClass}
-                            />
-                            <span className='text-red-500'>
-                                {touched.present_address && errors.present_address}
-                            </span>
-                        </div>
-                        <div className={divClassLeft}>
-                            <input
-                                type="text"
-                                name="permanent_address"
-                                placeholder='Permanent Address'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.permanent_address}
-                                className={inputClass}
-                            />
-                            <span className='text-red-500'>
-                                {touched.permanent_address && errors.permanent_address}
-                            </span>
-                        </div>
-                        <div className={divClassLeft}>
-                            <input
-                                type="text"
-                                name='academic_achievement'
-                                placeholder='Academic Achievement'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.academic_achievement}
-                                className={inputClass}
-                            />
-                            <span className='text-red-500'>
-                                {touched.academic_achievement && errors.academic_achievement}
-                            </span>
-                        </div>
-                        <div className={divClassLeft}>
-                            <input
-                                type="text"
-                                name='languages_skills'
-                                placeholder='Languages Skills'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.languages_skills}
-                                className={inputClass}
-                            />
-                            <span className='text-red-500'>
-                                {touched.languages_skills && errors.languages_skills}
-                            </span>
-                        </div>
-                        <div className={divClassLeft}>
-                            <input
-                                type="text"
-                                name='designation'
-                                placeholder='Designation'
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.designation}
-                                className={inputClass}
-                            />
-                            <span className='text-red-500'>
-                                {touched.designation && errors.designation}
-                            </span>
-                        </div>
+                        {INPUT_('name', 'Enter Name')}
+                        {INPUT_('father', 'Enter Father Name')}
+                        {INPUT_('mother', 'Enter Mother Name')}
+                        {INPUT_('present_address', 'Present address')}
+                        {INPUT_('permanent_address', 'Permanent Address')}
+                        {INPUT_('academic_achievement', 'Academic Achievement')}
+                        {INPUT_('languages_skills', 'Languages Skills')}
+                        {INPUT_('designation', 'Designation')}
                     </div>
                     <div className="mt-1 flex flex-col w-full h-full ml-40">
                         <div className={divClassRight}>
@@ -300,27 +214,18 @@ const Form = ({ values, errors, touched, handleChange, handleBlur, handleSubmit,
         <div className="w-[20%] h-full"></div>
     </div>
 
-)
+)}
 const StaffInfoUpdate = () => {
     const { id } = useParams();
     const [value, setValue] = useState();
     const navigate = useNavigate();
 
     const onSubmit = (values, { setSubmitting }) => {
-        fetch('http://localhost:3001/employees/' + id, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(values),
-        })
-            .then((response) => {
-                navigate('/sammary');
-            });
+        FETCH('PUT', values, id, navigate);
 
     }
     useEffect(() => {
-        fetch('http://localhost:3001/employees/' + id)
+        fetch(BASE_URL + id)
             .then((response) => response.json())
             .then((a) => {
                 setValue(a);
