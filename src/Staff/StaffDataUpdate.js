@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 import * as Yup from 'yup'
 import { BASE_URL, FETCH } from '../Config';
 
-const inputClass = "h-[10%] w-[50%] p-4 border border-blue-300 rounded-md m-1";
-const divClassRight = "flex flex-col w-full h-full ml-40";
-const divClassLeft = "flex flex-col w-full h-full ml-72";
+const inputClass = "h-[30%] w-[80%] p-6 border border-blue-300 rounded-md m-1";
+const divClassRight = "flex flex-col w-full h-full ml-10";
+const divClassLeft = "flex flex-col w-full h-full ml-10";
 const INPUT =(name, placeholder, handleChange, handleBlur, values, touched, errors)=>
 <div className={divClassLeft}>
                             <input
@@ -56,54 +56,54 @@ const StaffSchema = Yup.object().shape({
         .max(150, 'Too Long!')
         .required('Required'),
     designation: Yup.string()
-        .min(20, 'Must be at least 20 characters')
+        .min(10, 'Must be at least 10 characters')
         .max(50, 'Too Long!')
         .required('Required'),
-    contact_no: Yup.number()
-        .min(11, 'Configuration must be at least 20 characters')
+    contact_no: Yup.string()
+        .min(11, 'Configuration must be at least 11 characters')
         .max(11, 'Too Long!')
         .required('Required'),
     e_mail: Yup.string().email('Invalid email')
         .required('Required'),
-    room_no: Yup.number()
-        .min(5, 'Must be at least 5 characters')
+    room_no: Yup.string()
+        .min(3, 'Must be at least 3 characters')
         .max(10, 'Too Long!')
         .required('Required'),
     nationality: Yup.string()
-        .min(20, 'Must be at least 20 characters')
+        .min(5, 'Must be at least 5 characters')
         .max(50, 'Too Long!')
         .required('Required'),
     brith: Yup.string()
-        .min(20, 'Must be Date Format : Month/Date/Year')
+        .min(5, 'Must be Date Format : Month/Date/Year')
         .max(50, 'Too Long!')
         .required('Required'),
-    nid: Yup.number()
-        .min(20, 'Must be at least 20 characters')
+    nid: Yup.string()
+        .min(10, 'Must be at least 10 characters')
         .max(50, 'Too Long!')
         .required('Required'),
 });
 const Form = ({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) =>{
-const INPUT_=(name, placeholder)=>
+const INPUT2=(name, placeholder)=>
 INPUT(name, placeholder, handleChange, handleBlur, values, touched, errors)
 
 return (
     <div className="w-full h-full flex mt-20 mb-56">
         <div className="w-[20%] h-full"></div>
 
-        <div className="w-[60%] h-full bg-gray-100 ">
-            <p className="mt-5 mb-5 text-3xl text-red-700 font-bold font-serif text-center">Update Mobile Phoneset Info of Your Stock</p>
-            <div className="flex w-full h-full justify-center divide-x-2 divide-slate-500">
+        <div className="w-[60%] h-full bg-green-100 ">
+            <p className="mt-5 mb-5 text-3xl text-red-700 font-bold font-serif text-center">Update Staff Data</p>
+            <div className="flex w-full h-full justify-center">
 
-                <form onSubmit={handleSubmit}>
-                    <div className="mt-1 flex flex-col w-full h-full">
-                        {INPUT_('name', 'Enter Name')}
-                        {INPUT_('father', 'Enter Father Name')}
-                        {INPUT_('mother', 'Enter Mother Name')}
-                        {INPUT_('present_address', 'Present address')}
-                        {INPUT_('permanent_address', 'Permanent Address')}
-                        {INPUT_('academic_achievement', 'Academic Achievement')}
-                        {INPUT_('languages_skills', 'Languages Skills')}
-                        {INPUT_('designation', 'Designation')}
+                <form onSubmit={handleSubmit} className='flex divide-x-2 divide-slate-500'>
+                    <div className="mt-1 flex flex-col w-full h-full ">
+                        {INPUT2('name', 'Enter Name')}
+                        {INPUT2('father', 'Enter Father Name')}
+                        {INPUT2('mother', 'Enter Mother Name')}
+                        {INPUT2('present_address', 'Present address')}
+                        {INPUT2('permanent_address', 'Permanent Address')}
+                        {INPUT2('academic_achievement', 'Academic Achievement')}
+                        {INPUT2('languages_skills', 'Languages Skills')}
+                        {INPUT2('designation', 'Designation')}
                     </div>
                     <div className="mt-1 flex flex-col w-full h-full ml-40">
                         <div className={divClassRight}>
@@ -122,7 +122,7 @@ return (
                         </div>
                         <div className={divClassRight}>
                             <input
-                                type="email"
+                                type="text"
                                 name='e_mail'
                                 placeholder='Enter E-mail'
                                 onChange={handleChange}
@@ -136,7 +136,7 @@ return (
                         </div>
                         <div className={divClassRight}>
                             <input
-                                type="number"
+                                type="text"
                                 name='room_no'
                                 placeholder='Room No'
                                 onChange={handleChange}
@@ -178,7 +178,7 @@ return (
                         </div>
                         <div className={divClassRight}>
                             <input
-                                type="number"
+                                type="text"
                                 name='nid'
                                 placeholder='Enter NID Number'
                                 onChange={handleChange}
@@ -199,12 +199,11 @@ return (
                                 className={inputClass}
                             />
                         </div>
-                        <div className={divClassRight}>
+                        <div className=''>
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="text-center text-2xl text-white font-bold h-[10%] w-[50%] p-4 border border-blue-300 rounded-md ml-32 mb-5 mr-3 mt-12 bg-blue-600 hover:text-blue-300">
-                                Submit
+                                className="text-center text-2xl text-white font-bold h-[30%] w-[80%] py-6 border border-blue-300 rounded-md ml-11 mr-3 bg-blue-600 hover:text-blue-300">Submit
                             </button>
                         </div>
                     </div>
