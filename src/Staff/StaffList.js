@@ -38,7 +38,8 @@ function StaffSummary(){
     .map((a, i) => 
         <StaffSummaryDiv
         i={i + 1 + (3 * (pageNo - 1))} 
-        {...a}/>);
+        {...a}
+        />);
       
         setStaff(xyz);
       });

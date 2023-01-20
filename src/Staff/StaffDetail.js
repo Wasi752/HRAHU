@@ -43,14 +43,7 @@ function StaffDetails() {
     const navigate = useNavigate();
 
     const deleteData = () => {
-        fetch(BASE_URL + id, {
-            method: 'DELETE'
-        })
-            .then((response) => {
-                navigate("/summary");
-            });
-
-
+        FETCH('DELETE', {}, navigate, id)
     }
     useEffect(() => {
         
