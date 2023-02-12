@@ -60,7 +60,7 @@ function StudentResults() {
     const [sResult, setSResult] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:3001/results')
+        fetch('http://localhost:3001/result')
             .then((response) => response.json())
             .then((data) => {
     const y = data.filter((f) => f.roll === rollNo)[0];

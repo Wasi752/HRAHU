@@ -58,7 +58,7 @@ function MadrasaResults() {
     const [madrasaName, setMadrasaName] = useState("");
 
     useEffect(() => {
-        fetch('http://localhost:3001/results')
+        fetch('http://localhost:3001/result')
             .then((response) => response.json())
             .then((data) => {
                 const y = data.filter((f) => f.mcode === codeNo)
@@ -83,7 +83,7 @@ function MadrasaResults() {
                     setMResult(y);
                     
             });
-            fetch('http://localhost:3001/results')
+            fetch('http://localhost:3001/result')
             .then((response) => response.json())
             .then((data) => {
                 const n = data.filter((f) => f.mcode === codeNo)
