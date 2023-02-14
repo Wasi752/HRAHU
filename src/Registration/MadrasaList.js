@@ -29,7 +29,7 @@ function MadrasaList({ id, code, ilhaq, mnamearabic, mnamebangali, mnameenglish,
 function MadrasaLists({ board }) {
     const [madrasaL, setMadrasaL] = useState("");
     
-        fetch('http://localhost:3001/madrasas')
+        fetch('http://localhost:3001/madrasa')
             .then((response) => response.json())
             .then((data) => {
                const d = data.map(k =>
