@@ -70,18 +70,7 @@ function StudentResults() {
                 i={y.id}
                 id={y.id}    
                 srl={y.id}
-                roll={y.roll}
-                name={y.name}
-                bukhari1={y.bukhari1}
-                bukhari2={y.bukhari2}
-                muslim1={y.muslim1}
-                muslim2={y.muslim2}
-                tirmizi1={y.tirmizi1}
-                tirmizi2={y.tirmizi2}
-                abudaud={y.abudaud}
-                nasayee={y.nasayee}
-                tahabi={y.tahabi}
-                muwattan={y.muwattan}
+                {...y}
                 total={y.bukhari1 + y.bukhari2 + y.muslim1 + y.muslim2 + y.tirmizi1 + y.tirmizi2 + y.abudaud + y.nasayee + y.tahabi + y.muwattan}
                 />);
         });
