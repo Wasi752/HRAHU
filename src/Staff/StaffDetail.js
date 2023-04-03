@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { BASE_URL, FETCH, GET } from "../Config";
+import useAuthentication from "../util";
 
 const CLS =(value)=> 
 <p className="text-lg font-serif">{value}</p>
@@ -41,6 +42,7 @@ function StaffDetails() {
     const [pageNo, setPageNo] = useState(1);
     const [staff, setStaff] = useState();
     const navigate = useNavigate();
+    useAuthentication();
 
     const deleteData = () => {
         FETCH('DELETE', {}, navigate, id)

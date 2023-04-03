@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useAuthentication from "../util";
 
 const inputClass = "h-[10%] w-[65%] p-4 border border-blue-300 rounded-md m-1";
 const lableClass = "ml-0 pr-2 mt-5 text-xl font-bold";
@@ -30,7 +31,7 @@ function StudentRegistrationForm() {
     const [image, setImage] = useState("");
     const [brith, setBrith] = useState("");
     const [nid, setNid] = useState("");
-
+    useAuthentication();
     const submit = () => {
         if (name.length < 4) {
             window.alert('Name must be contain atleast 3 Characters');

@@ -27,32 +27,32 @@ function App() {
   return (
     <div className="w-full h-full">
       <Routes>
-        <Route path="/" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/summary" element={<StaffSummary />} />
-        <Route path="/summary/staff" element={<StaffForm />}/>
-        <Route path="/sdetails/:id" element={<StaffDetails/>} />
-        <Route path="/sdetails/:id/edit" element={<StaffInfoUpdate/>} />
+        <Route path="/summary/staff" element={<StaffForm />} />
+        <Route path="/sdetails/:id" element={<StaffDetails />} />
+        <Route path="/sdetails/:id/edit" element={<StaffInfoUpdate />} />
         <Route path="/form" element={<Form />} />
-        <Route path="/board" element={<BoardList/>} />
-        <Route path="/work" element={<WorksEvent/>} />
-        <Route path="/result" element={<Result/>} />
-        <Route path="/result/student/:menu" element={<StudentResults/>} />
-        <Route path="/result/madrasa/:menu" element={<MadrasaResults/>}/>
+        <Route path="/board" element={<BoardList />} />
+        <Route path="/work" element={<WorksEvent />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/result/student/:menu" element={<StudentResults />} />
+        <Route path="/result/madrasa/:menu" element={<MadrasaResults />} />
         <Route path="/reg" element={<Registration />} />
-        <Route path="/reg/madrasa" element={<MadrasaRegForm />}/>
+        <Route path="/reg/madrasa" element={<MadrasaRegForm />} />
         <Route path="/reg/madrasa/madrasalist" element={<MadrasaLists board="Wifaqul Madarisil Arabia Bangladesh" />} />
-        <Route path="/reg/student/:menu" element={<FazilatResults/>} />
-        <Route path="/reg/studentlist" element={<MadrasaRegForm/>} />
+        <Route path="/reg/student/:menu" element={<FazilatResults />} />
+        <Route path="/reg/studentlist" element={<MadrasaRegForm />} />
         <Route path="/form" element={<Form />} />
         <Route path="/passvalidation" element={<PasswordAndConfirmPasswordValidation />} />
-        <Route path="/login" element={<Basic/>} />
-        <Route path="/register" element={<Register/>} />
-        <Route path="/confirm/:menu" element={<Confirmation/>} />
-        <Route path="/safayee/:menu" element={<SafayeeGroups/>} />
+        <Route path="/login" element={<Basic />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/confirm/:menu" element={<Confirmation />} />
+        <Route path="/safayee/:menu" element={<SafayeeGroups />} />
       </Routes>
-     
+
     </div>
   );
 }

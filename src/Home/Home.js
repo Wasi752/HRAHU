@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import HeaderANavbar from "./HeaderANavbar";
 import FooterAFNavbar from "./Footer/Footer";
+import useAuthentication from "../util";
+
 
 const cls = "w-[20%] h-[80%] flex flex-col justify-center ml-16  mt-20 bg-gray-100";
 const clas = "text-3xl text-center mb-5 font-bold font-serif text-blue-700";
@@ -65,6 +67,7 @@ const certificateLink = [
 const certificatesLink = certificateLink.map(x => <HomePage link={x.link} itemname={x.iname}/>);
 
 function Home() {
+    useAuthentication();
     const cName = "border border-blue-300 w-[80%] p-3 ml-10 mb-2 text-xl text-center justify-center font-bold font-serif hover:text-blue-600";
     return (
         <div>

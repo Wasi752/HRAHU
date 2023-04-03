@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useAuthentication from "../util";
 
 const lcl = "ml-4 pr-2 mt-1 text-xl font-bold font-serif";
 const icl = "h-[10%] w-[65%] p-4 border border-blue-300 rounded-md mt-1";
@@ -17,6 +18,7 @@ function MadrasaRegForm() {
     const [division, setDivision] = useState("");
     const [eMail, setEMail] = useState("");
     const [phone, setPhone] = useState("");
+    useAuthentication();
 
     const submit = () => {
         const user = {

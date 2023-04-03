@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import useAuthentication from "../util";
 
 function InputForRollNo() {
     const [roll, setRoll] = useState();
@@ -55,6 +56,7 @@ function InputForMadrasaCodeNo() {
 function Result() {
     const [showRoll, setShowRoll] = useState(false);
     const [showMadrasa, setShowMadrasa] = useState(false);
+    useAuthentication();
     return (
         <div className="w-full h-screen flex">
             <div className="w-[20%] h-[80%] bg-blue-500 mt-20 ml-56">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import StudentRegistrationForm from "./StudentRegistrationForm";
+import useAuthentication from "../util";
 
 function FazilatResult({ id, i, mname, sroll, reg, name, fname, mcode, dateBirth, total, divi }) {
     const [show, setShow] = useState(false);
@@ -38,7 +39,7 @@ function FazilatResult({ id, i, mname, sroll, reg, name, fname, mcode, dateBirth
     )
 };
 function FazilatResults() {
-    
+    useAuthentication();
     const { menu } = useParams();
     const rollNo = parseInt(menu);
     const [page, setPage] = useState(1);

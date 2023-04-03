@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useAuthentication from "../util";
 
 const divClassLeft = "flex flex-col w-full h-full ml-56 mt-20";
 
@@ -19,7 +20,7 @@ function Boards ({code, narabic, nbangla, nenglish, address, email, phone}){
 }
 function BoardList(){
     const [boards, setBoardList] = useState("");
-    
+    useAuthentication();
         fetch('http://localhost:3001/boards')
             .then((response) => response.json())
             .then((data) => {

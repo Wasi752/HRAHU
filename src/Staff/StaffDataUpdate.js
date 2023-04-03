@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import * as Yup from 'yup'
 import { BASE_URL, FETCH } from '../Config';
+import useAuthentication from '../util';
 
 const inputClass = "h-[30%] w-[80%] p-6 border border-blue-300 rounded-md";
 const divClassRight = "flex flex-col w-full h-full ml-10";
@@ -140,6 +141,7 @@ const StaffInfoUpdate = () => {
     const { id } = useParams();
     const [value, setValue] = useState();
     const navigate = useNavigate();
+    useAuthentication();
 
     const onSubmit = (values, { setSubmitting }) => {
         FETCH('PUT', values, navigate, id);

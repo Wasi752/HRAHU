@@ -13,7 +13,7 @@ function Signin() {
         };
 
         fetch('http://localhost:3001/signin', {
-            method: 'POST', // or 'PUT'
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -26,8 +26,10 @@ function Signin() {
             })
             .then((body) => {
                 if (body) {
-                 navigate("/home")
-                    //window.alert(`Signed in as ${body.username}`)
+                    localStorage.setItem('code', body.username)
+                    localStorage.setItem('iv', body.password)
+                    navigate("/home") //+ body.id
+                    //window.alert(`Signed in as ${body.fullName}`)
                 }
                 else {
                     window.alert(`No user exists with ${username} or ${password} `);

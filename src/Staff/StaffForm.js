@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { BASE_URL, FETCH } from "../Config";
 import { useNavigate } from "react-router-dom";
+import useAuthentication from "../util";
 
 
 const inputClass = "h-[10%] w-[65%] p-4 border border-blue-300 rounded-md m-1";
@@ -37,6 +38,7 @@ function StaffForm() {
     const [brith, setBrith] = useState("");
     const [nid, setNid] = useState("");
     const navigate = useNavigate();
+    useAuthentication();
 
 
     const submit = () => {

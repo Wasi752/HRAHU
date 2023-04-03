@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { BASE_URL, GET } from "../Config";
+import useAuthentication from "../util";
 
 
 function StaffSummaryDiv({id, name, designation, contact_no, e_mail, image, i}){
@@ -30,6 +31,7 @@ function StaffSummaryDiv({id, name, designation, contact_no, e_mail, image, i}){
 function StaffSummary(){
     const [pageNo, setPageNo] = useState(1);
     const [staff, setStaff] = useState();
+    useAuthentication();
     
     useEffect(() => {
        GET('', (data) => {

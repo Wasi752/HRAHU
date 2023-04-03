@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import useAuthentication from "../util";
 
 function InputForFazilatInfo() {
     const [roll, setRoll] = useState();
@@ -37,7 +38,7 @@ function InputForFazilatInfo() {
 
 function Registration() {
     const [showRoll, setShowRoll] = useState(false);
-    
+    useAuthentication();
     return (
         <div className="w-full h-screen flex">
             <div className="w-[20%] h-[80%] bg-gray-800 mt-20 ml-56">

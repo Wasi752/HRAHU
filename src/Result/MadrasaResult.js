@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import useAuthentication from "../util";
 
 
 export function MadrasaResult({ id, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
@@ -56,6 +57,7 @@ function MadrasaResults() {
     const [page, setPage] = useState(1);
     const [mResult, setMResult] = useState();
     const [madrasaName, setMadrasaName] = useState("");
+    useAuthentication();
 
     useEffect(() => {
         fetch('http://localhost:3001/result')

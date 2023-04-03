@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import useAuthentication from "../util";
 
 export function StudentResult({ id, i, mname, srl, roll, name, bukhari1, bukhari2, muslim1, muslim2, tirmizi1, tirmizi2, abudaud, nasayee, tahabi, muwattan, total, divi, mscore }) {
     const tbl = "border border-green-300 pt-2 pb-2 pl-1 pr-2 ml-5 text-center text-lg border-spacing-1";
@@ -53,11 +54,12 @@ export function StudentResult({ id, i, mname, srl, roll, name, bukhari1, bukhari
     )
 };
 function StudentResults() {
-    
+    useAuthentication();
     const { menu } = useParams();
     const rollNo = parseInt(menu);
     const [page, setPage] = useState(1);
     const [sResult, setSResult] = useState();
+    
 
     useEffect(() => {
         fetch('http://localhost:3001/result')

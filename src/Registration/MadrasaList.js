@@ -1,32 +1,42 @@
 import { useEffect, useState } from "react";
 import { boardList } from "./Board";
+import useAuthentication from "../util";
+
 
 const tbl = "border border-blue-300 p-3 text-left text-xl";
-
+const td = (prop, nbn, nen)=>{
+    return (
+        <td className={tbl}> {prop} <p>{nbn}</p> <p>{nen}</p></td>
+    )
+}
 function MadrasaList({ id, code, ilhaq, mnamearabic, mnamebangali, mnameenglish, address, muhtamim, nazim, jela, divis, email, phone }) {
     return (
         <div className="flex flex-col justify-center w-[80%] h-full ml-56">
             <table className="w-full h-full text-justify border border-green-700">
             <tr className="w-full h-full ml-56">
-                <td className={tbl}> {id}</td>
-                <td className={tbl}> {code}</td>
-                <td className={tbl}> {ilhaq}</td>
-                <td className={tbl}> {mnamearabic}
-                    <p>{mnamebangali}</p>
-                    <p>{mnameenglish}</p></td>
-                <td className={tbl}> {address}</td>
-                <td className={tbl}> {phone}</td>
-                <td className={tbl}> {email}</td>
-                <td className={tbl}> {muhtamim}</td>
-                <td className={tbl}> {nazim}</td>
-                <td className={tbl}> {jela}</td>
-                <td className={tbl}> {divis}</td>
+                {td(id)}
+                {td(code)}
+                {td(ilhaq)}
+                {td(mnamearabic, mnamebangali, mnameenglish)}
+                {td(address)}
+                {td(phone)}
+                {td(email)}
+                {td(muhtamim)}
+                {td(nazim)}
+                {td(jela)}
+                {td(divis)}
             </tr>
             </table>
         </div>
     )
 }
+const th = (head)=>{
+    return (
+        <th className={tbl}>{head}</th>
+    )
+}
 function MadrasaLists({ board }) {
+    useAuthentication();
     const [madrasaL, setMadrasaL] = useState("");
     
         fetch('http://localhost:3001/madrasa')
@@ -40,12 +50,7 @@ function MadrasaLists({ board }) {
                             mnamearabic={k.name_arabic}
                             mnamebangali={k.name_bangala}
                             mnameenglish={k.name_english}
-                            address={k.address}
-                            phone={k.phone}
-                            email={k.e_mail}
-                            muhtamim={k.muhtamim}
-                            nazim={k.nazim}
-                            jela={k.jela}
+                            {...k}
                             divis={k.division} />)
                         setMadrasaL(d)
             });
@@ -61,19 +66,18 @@ function MadrasaLists({ board }) {
             <div className="w-[80%] h-full justify-center flex ml-56">
                 <table className="w-full h-full text-justify border border-green-700">
                     <tr className="w-full h-full">
-                        <th className={tbl}>Srl</th>
-                        <th className={tbl}>Code</th>
-                        <th className={tbl}>Ilhaq </th>
-                        <th className={tbl}>Name oF Madrasa</th>
-                        <th className={tbl}>Address</th>
-                        <th className={tbl}>Phone</th>
-                        <th className={tbl}>E-mail</th>
-                        <th className={tbl}>Mutamim</th>
-                        <th className={tbl}>Nazim</th>
-                        <th className={tbl}>Jala</th>
-                        <th className={tbl}>Division</th>
+                        {th('Srl')}
+                        {th('Code')}
+                        {th('Ilhaq' )}
+                        {th('Name of Madrasa')}
+                        {th('Address')}
+                        {th('Phone')}
+                        {th('E-mail')}
+                        {th('Mutamim')}
+                        {th('Nazim')}
+                        {th('Jala')}
+                        {th('Division')}
                     </tr>
-                    
                 </table>
                 
             </div>
